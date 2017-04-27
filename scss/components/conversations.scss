@@ -1,0 +1,97 @@
+$guild-icon-width: 50px;
+
+// Conversations
+._1enh {
+    flex: initial !important;
+    width: $friend-list-width;
+    min-width: initial !important;
+    background: $color-friend-list;
+
+    // Messenger title
+    ._1tqi {
+        display: none;
+    }
+
+    // Actions
+    ._36ic {
+        display: block;
+        height: initial;
+        padding: 0 !important;
+
+        // Settings
+        ._4kzu {
+            box-sizing: border-box;
+            display: block !important;
+            opacity: 0.7;
+            height: $header-height;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        // New message
+        ._2oc8 {
+            display: block;
+            width: $guild-icon-width;
+            height: $guild-icon-width;
+            margin: 4px auto;
+            border: 1px dashed #535559;
+            border-radius: 50%;
+            background: $color-friend-list;
+            text-align: center;
+            text-decoration: none;
+            color: #535559;
+            transition: border-color 0.25s ease, color 0.25s ease;
+
+            &:hover {
+                border-color: rgba(#FFF, 0.75);
+                color: rgba(#FFF, 0.75);
+            }
+
+            &:after {
+                display: block;
+                position: relative;
+                top: -1px;
+                font-size: 40px;
+                font-weight: 200;
+                content: '+';
+            }
+        }
+    }
+
+    // Search
+    ._5iwm {
+        display: none;
+    }
+
+    // Friend item
+    ._1ht1 {
+        height: 58px;
+
+        // Friend settings
+        ._5blh {
+            display: none;
+
+            ._4ld- {
+                border-radius: 25px;
+                transition: border 0.2s ease-in-out;
+            }
+        }
+
+        // Active conversation
+        &._1ht2 {
+            ._4ld- {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    // New message item
+    div[aria-label="Conversations"] > ._1ht1 {
+        display: none;
+    }
+
+    // Friend name and status
+    ._1qt4 {
+        display: none;
+    }
+}

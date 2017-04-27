@@ -1,0 +1,35 @@
+// Textarea
+._4rv3 {
+    box-sizing: border-box;
+    align-items: flex-start;
+    height: 96px;
+    margin: 0 20px;
+    padding: 20px 0 30px;
+
+    // Input wrapper
+    ._5irm {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        min-height: 46px;
+        margin: 0 !important;
+        padding: 0 10px;
+        border: 2px solid #DADDDF;
+        border-radius: 3px;
+
+        // Input
+        ._3-8x {
+            margin: 0;
+        }
+
+        // Chat actions
+        ._4rv4 {
+            padding: 0;
+
+            // Send a like custom emoji
+            ._4rv9 img {
+                float: right;
+            }
+        }
+    }
+}

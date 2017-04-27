@@ -1,0 +1,109 @@
+$padding: 30px;
+$avatar-width: 32px;
+
+// Right sidebar
+._4_j5 {
+    max-width: 240px !important;
+    padding-top: 20px;
+    border: none !important;
+    background: #F3F3F3;
+
+    // Section divider
+    ._1li- {
+        border: none;
+    }
+
+    // Content
+    ._3tkv {
+        padding-top: 8px;
+    }
+
+    // Conversation info, Section title, Options, Add people
+    ._1jt6, ._1lj0, ._3szn, ._4rph {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+
+    // Conversation info
+    ._1jt6 {
+        // Group image
+        ._4ldz, ._4ld- {
+            width: $avatar-width !important;
+            height: $avatar-width !important;
+        }
+        // Image uploader
+        ._2jnr:hover ._2lyy {
+            width: $avatar-width;
+            height: $avatar-width;
+        }
+        // Image uploader "edit"
+        ._m ._4qba {
+            position: relative;
+            top: -15px;
+        }
+
+        // Title
+        ._2jnv {
+            font-family: $font-family;
+        }
+
+        // Subtitle
+        ._3eus ._4qba {
+
+        }
+    }
+
+    // Group settings dropdown
+    // Will be moved next to the conversation title by JS
+    ._3-ne {
+        display: none;
+        opacity: 0.75;
+        position: fixed;
+        z-index: 1000;
+        top: 21px;
+        left: 50%;
+
+        // Disable outline on trigger
+        ._5blh {
+            outline: none;
+        }
+    }
+
+    // Reduce amount of text in search button
+    [data-intl-translation="Search in Conversation"] {
+        font-size: 0;
+
+        &:after {
+            display: inline-block;
+            font-size: 14px;
+            content: 'Search';
+        }
+    }
+
+    // Facebook URL
+    ._4v0l {
+        display: block;
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+
+    // Add people
+    ._4rph ._4rpi {
+        margin-left: 5px;
+    }
+
+    // People list
+    ._4wc- {
+        padding-left: 18px;
+    }
+
+    // Shared photos
+    ._40jj {
+        padding: 0 $padding $padding;
+    }
+    // Shared photos loading spinner
+    ._2n20 {
+        position: relative;
+        top: -17px;
+    }
+}

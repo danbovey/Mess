@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "MessengerDiscord",
+  "description": "Discord styling for messenger.com",
+  "author": "Dan Bovey",
+  "version": "1.0.0",
+  "minimum_chrome_version": "36",
+
+  "permissions": [
+    "storage",
+    "*://*.messenger.com/*",
+    "*://fonts.gstatic.com/*"
+  ],
+
+  "content_scripts": [ {
+    "js": [ "js/content.js" ],
+    "css": [ "css/style.css" ],
+    "matches": [ "*://*.messenger.com/*"]
+  }],
+
+  "web_accessible_resources": [
+      "font/*.ttf"
+  ]
+}

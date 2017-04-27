@@ -1,0 +1,60 @@
+$action-color: #4F545C;
+
+// Header
+._5742 {
+    display: flex;
+    align-items: center;
+    height: $header-height !important;
+    box-shadow: $header-box-shadow;
+    background: #FFF;
+    text-align: left !important;
+
+    // Conversation title
+    ._5743 {
+        margin-left: 0 !important;
+
+        ._3oh- {
+            margin-left: 12px;
+            font-weight: bold;
+            color: $action-color;
+        }
+
+        // Subtitle "active x minutes ago"
+        ._2v6o {
+            margin-left: 12px;
+        }
+    }
+
+    // Chat actions
+    ._fl2 {
+        bottom: initial;
+        padding: 0 15px 0 0;
+
+        li {
+            margin-right: 15px;
+        }
+
+        // Button (a)
+        ._30yy {
+            opacity: 0.6;
+            transition: opacity 0.2s;
+
+            &:hover, &:focus {
+                opacity: 0.8;
+            }
+        }
+        svg, svg path {
+            stroke: $action-color !important;
+            stroke-width: 3px !important;
+        }
+        svg polygon, svg circle {
+            fill: $action-color !important;
+            stroke-width: 2px !important;
+        }
+        // Right sidebar is active
+        li:last-child svg g g path {
+            fill: #000 !important;
+            stroke-width: 0 !important;
+        }
+    }
+}
