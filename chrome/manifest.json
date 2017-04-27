@@ -21,6 +21,7 @@
 
   "web_accessible_resources": [
       "img/*.svg",
+      "img/*.png",
       "font/*.ttf"
   ]
 }

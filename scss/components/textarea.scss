@@ -78,6 +78,12 @@
                     -webkit-text-fill-color: rgba(#FFF, 0.2);
                 }
             }
+
+            // Sticker action, Game action
+            ._4rv6, ._4ce_ {
+                opacity: 1;
+                background-image: url('chrome-extension://__MSG_@@extension_id__/img/chat-actions.png');
+            }
         }
     }
 }
