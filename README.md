@@ -6,4 +6,4 @@
 
 ## Preview
 
-![Screenshot](http://i.imgur.com/xRI3aj0.jpg)
+![Screenshot](http://i.imgur.com/p1b50fl.jpg)
