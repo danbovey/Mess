@@ -1,0 +1,50 @@
+// Chat scroller
+._4_j4 {
+    ._ih3 {
+        margin-bottom: 3px;
+    }
+
+    // On larger screens, reduce chat font size from 16px
+    @media(min-width: 1600px) {
+        .__i_ {
+            font-size: 15px !important;
+        }
+    }
+}
+
+.Mess-chat_style-irc {
+    // My bubbles
+    ._o46._3i_m ._3058 {
+        float: left !important;
+    }
+
+    // Make a chat message fill the width
+    ._52mr {
+        max-width: 90% !important;
+    }
+}
+
+.Mess-theme-light {
+
+}
+
+.Mess-theme-dark {
+    // App body
+    ._4sp8 {
+        background: #36393E;
+    }
+
+    ._4_j4 {
+        // Person who sent the message, Centered timestamp
+        ._ih3, ._497p {
+            color: #707578;
+        }
+    }
+
+    &.Mess-chat_style-bubbles {
+        // Other people's bubble
+        ._29_7 ._hh7 {
+            background: rgba(#FFF, 0.2);
+        }
+    }
+}

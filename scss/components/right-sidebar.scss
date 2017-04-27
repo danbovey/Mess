@@ -6,7 +6,6 @@ $avatar-width: 32px;
     max-width: 240px !important;
     padding-top: 20px;
     border: none !important;
-    background: #F3F3F3;
 
     // Section divider
     ._1li- {
@@ -46,11 +45,6 @@ $avatar-width: 32px;
         ._2jnv {
             font-family: $font-family;
         }
-
-        // Subtitle
-        ._3eus ._4qba {
-
-        }
     }
 
     // Reduce amount of text in search button
@@ -89,5 +83,30 @@ $avatar-width: 32px;
     ._2n20 {
         position: relative;
         top: -17px;
+    }
+}
+
+.Mess-theme-light {
+    ._4_j5 {
+        background: #F3F3F3;
+    }
+}
+
+.Mess-theme-dark {
+    $text-color: rgba(#FFF, 0.4);
+
+    ._4_j5 {
+        background: #2E3136;
+        color: $text-color;
+
+        // Conversation text edit, Section title, Options text, Add People, People
+        ._2jnv, ._1lj0, ._3szn ._4qba, ._4rph ._4rpj, ._364g {
+            color: $text-color;
+        }
+
+        // Conversation info subtitle
+        ._3eus {
+            color: darken($text-color, 3%);
+        }
     }
 }

@@ -3,5 +3,20 @@
     display: flex;
     align-items: center;
     height: $header-height;
-    box-shadow: $header-box-shadow;
+}
+
+.Mess-theme-light {
+    ._2y8y {
+        box-shadow: 0 2px 0 rgba(#ECEEEF, 0.25);
+        border-color: #ECEEEF;
+        background: #FFF;
+    }
+}
+
+.Mess-theme-dark {
+    ._2y8y {
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+        border-color: #303337;
+        background: #36393E;
+    }
 }

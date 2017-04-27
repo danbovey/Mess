@@ -1,17 +1,25 @@
-window.onload = () => {
-    console.log('Messenger Discord Skin v1.0.0');
+const Storage = require('./storage');
 
-    // Define important elements
-    const els = {
-        conversations: document.querySelector('._1enh'),
-        header: document.querySelector('._5742'),
-        rightSidebar: document.querySelector('._4_j5')
-    };
+Storage.load()
+    .then(options => {
+        document.body.classList.add(
+            `Mess-theme-${options.theme}`,
+            options.chat.style == 'bubbles' ? 'Mess-chat_style-bubbles' : 'Mess-chat_style-irc'
+        );
 
-    const components = [
-        require('./components/ext-settings'),
-        require('./components/chat-settings')
-    ];
+        window.onload = () => {
+            // Define important elements
+            const els = {
+                conversations: document.querySelector('._1enh'),
+                header: document.querySelector('._5742'),
+                rightSidebar: document.querySelector('._4_j5')
+            };
 
-    components.forEach(c => c(els));
-};
+            const components = [
+                require('./components/ext-settings'),
+                require('./components/chat-settings')
+            ];
+
+            components.forEach(c => c(els, Storage));
+        };
+    });

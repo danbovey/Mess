@@ -7,6 +7,8 @@
 @import "./components/header";
 @import "./components/right-sidebar";
 @import "./components/textarea";
+@import "./components/chat";
+@import "./components/day-modal";
 
 // Pages
 @import "./pages/new-conversation";
@@ -16,4 +18,6 @@
 @import "./common/tooltips";
 
 // Mess components
+@import "./mess/buttons";
+@import "./mess/modals";
 @import "./mess/ext-settings";

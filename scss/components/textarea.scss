@@ -12,7 +12,7 @@
         min-height: 46px;
         margin: 0 !important;
         padding: 0 10px;
-        border: 2px solid #DADDDF;
+        border: 2px solid transparent;
         border-radius: 3px;
 
         ._kmc {
@@ -35,6 +35,11 @@
         ._5irm {
             align-items: flex-start;
 
+            ._kmc {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+
             // Chat actions
             ._4rv4 {
                 padding: 5px 0;
@@ -42,6 +47,35 @@
                 // Send a like custom emoji
                 ._4rv9 img {
                     float: right;
+                }
+            }
+        }
+    }
+}
+
+.Mess-theme-light {
+    ._4rv3 {
+        ._5irm {
+            border-color: #DADDDF;
+        }
+    }
+}
+
+.Mess-theme-dark {
+    // Textarea
+    ._4rv3 {
+        // Input wrapper
+        ._5irm {
+            border-color: rgba(#FFF, 0.2);
+            background: rgba(#FFF, 0.06);
+
+            ._kmc {
+                color: rgba(#FFF, 0.7);
+
+                // Placeholder
+                ._1p1v {
+                    color: rgba(#FFF, 0.2);
+                    -webkit-text-fill-color: rgba(#FFF, 0.2);
                 }
             }
         }

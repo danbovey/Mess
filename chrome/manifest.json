@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "MessengerDiscord",
-  "description": "Discord styling for messenger.com",
+  "name": "Mess",
+  "description": "A Discord skin for messenger.com",
   "author": "Dan Bovey",
   "version": "1.0.0",
   "minimum_chrome_version": "36",
@@ -20,6 +20,7 @@
   }],
 
   "web_accessible_resources": [
+      "img/*.svg",
       "font/*.ttf"
   ]
 }

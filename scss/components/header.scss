@@ -4,9 +4,13 @@ $action-color: #4F545C;
 ._5742 {
     display: flex;
     align-items: center;
+    // Seems to be a gap between conversations and header
+    position: relative;
+    left: -1px;
     height: $header-height !important;
-    box-shadow: $header-box-shadow;
-    background: #FFF;
+    // Fill the gap made with left
+    margin-right: -1px;
+    border-bottom: 1px solid transparent;
     text-align: left !important;
 
     // Conversation title
@@ -17,7 +21,6 @@ $action-color: #4F545C;
         ._3oh- {
             margin-left: 12px;
             font-weight: bold;
-            color: $action-color;
         }
 
         // Subtitle "active x minutes ago"
@@ -44,8 +47,6 @@ $action-color: #4F545C;
         z-index: 1;
         bottom: initial;
         padding: 0 15px 0 0;
-        // On small screens, this can overlap the title
-        background: #FFF;
 
         li {
             margin-right: 15px;
@@ -61,17 +62,109 @@ $action-color: #4F545C;
             }
         }
         svg, svg path {
-            stroke: $action-color !important;
             stroke-width: 3px !important;
         }
         svg polygon, svg circle {
-            fill: $action-color !important;
             stroke-width: 2px !important;
         }
         // Right sidebar is active
-        li:last-child svg g g path {
-            fill: #000 !important;
-            stroke-width: 0 !important;
+        li:last-child {
+            a[aria-expanded="true"] {
+                opacity: 1;
+            }
+            svg g g path {
+                stroke-width: 0 !important;
+            }
+        }
+    }
+
+    // Contact's messenger day
+    ._1cwz {
+        order: 2;
+        position: relative;
+        top: 20px;
+        margin-left: 30px;
+    }
+}
+
+// Light theme
+.Mess-theme-light {
+    $action-color: #4F545C;
+
+    // Header
+    ._5742 {
+        box-shadow: 0 2px 0 rgba(#ECEEEF, 0.25);
+        border-color: #ECEEEF;
+        background: #FFF;
+
+        // Conversation title
+        ._5743 ._3oh- {
+            color: $action-color;
+        }
+
+        // Chat actions
+        ._fl2 {
+            // On small screens, this can overlap the title
+            background: #FFF;
+
+            svg, svg path {
+                stroke: $action-color !important;
+            }
+            svg polygon, svg circle {
+                fill: $action-color !important;
+            }
+            li:last-child {
+                svg g g path {
+                    fill: $action-color !important;
+                }
+            }
+        }
+    }
+}
+
+// Dark theme
+.Mess-theme-dark {
+    $action-color: #FFF;
+
+    // Header
+    ._5742 {
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+        border-color: #303337;
+        background: #36393E;
+
+        // Conversation title
+        ._5743 ._3oh- {
+            color: $action-color;
+        }
+        //Subtitle
+        ._2v6o {
+            color: #707578;
+        }
+
+        // Chat actions
+        ._fl2 {
+            // On small screens, this can overlap the title
+            background: #36393E;
+
+            svg, svg path {
+                stroke: $action-color !important;
+            }
+            svg polygon, svg circle {
+                fill: $action-color !important;
+            }
+            li:last-child {
+                svg g g path {
+                    fill: $action-color !important;
+                }
+            }
+        }
+
+        // Contact's messenger day
+        ._1cwz {
+            // Time
+            ._1suk {
+                color: #707578;
+            }
         }
     }
 }

@@ -1,0 +1,15 @@
+.Mess-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background: $color-primary;
+    font: 15px $font-family;
+    line-height: 15px;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover, &:focus {
+        background: darken($color-primary, 7%);
+    }
+}

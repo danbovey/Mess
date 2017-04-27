@@ -1,3 +1,232 @@
-.Mess-ext-settings span {
+.Mess-ext-settings-toggle span {
     font-size: 14px;
+}
+
+.Mess-ext-settings {
+    .Mess-modal-content {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        max-height: 600px;
+        background: none;
+    }
+
+    .settings-sidebar {
+        width: 190px;
+        overflow-y: auto;
+        border-radius: 5px 0 0 5px;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+        background: #2E3136;
+        color: #FFF;
+
+        h3 {
+            padding: 20px 0 18px 18px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: inherit;
+        }
+
+        .sidebar-item {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 8px 6px 10px 20px;
+            border: none;
+            outline: none;
+            background: none;
+            font-family: inherit;
+            font-size: 14px;
+            text-align: left;
+            color: rgba(#FFF, 0.3);
+            cursor: pointer;
+
+            &:before {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                border-left: 4px solid $color-primary;
+                content: '';
+            }
+            &:hover:before, &:focus:before {
+                opacity: 0.3;
+            }
+            &.selected {
+                color: #FFF;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &.sidebar-item-small {
+                margin-top: 10px;
+                font-size: 12px;
+                color: #FAA61A;
+                opacity: 0.7;
+
+                &:before {
+                    opacity: 1;
+                    position: absolute;
+                    top: -5px;
+                    left: 20px;
+                    width: 20px;
+                    height: 1px;
+                    border: none;
+                    background: rgba(#FFF, 0.1);
+                    content: '';
+                }
+                &:hover:before, &:focus:before {
+                    opacity: 1;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .settings-right {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .settings-inner {
+            display: flex;
+            flex: 1;
+            overflow-y: auto;
+            padding: 28px 40px;
+            border-radius: 0 5px 0 0;
+            background: #FFF;
+        }
+        .settings-actions {
+            flex-shrink: 0;
+            border-radius: 0 0 5px 0;
+            padding: 18px 40px;
+            border-top: 1px solid #F0F0F0;
+            background: #F9F9F9;
+            text-align: right;
+        }
+
+        .Mess-setting-panel {
+            display: none;
+            width: 100%;
+
+            &.active {
+                display: block;
+            }
+
+            .Mess-setting-group {
+                font-size: 14px;
+            }
+
+            h4 {
+                text-transform: uppercase;
+                color: #87909C;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            hr {
+                margin-bottom: 20px;
+                padding-top: 10px;
+                border: none;
+                border-bottom: 1px solid #F0F0F0;
+                background: none;
+            }
+
+            .control-groups {
+                margin: 7px 0;
+
+                .radio {
+                    display: flex;
+                    align-items: center;
+
+                    input {
+                        -webkit-appearance: none;
+                        position: relative;
+                        width: 28px;
+                        height: 28px;
+                        margin-right: 10px;
+                        outline: none;
+                        border: 1px solid #CDCDCD;
+                        border-radius: 50%;
+                        cursor: pointer;
+
+                        &:after {
+                            opacity: 0;
+                            position: absolute;
+                            top: 6px;
+                            left: 6px;
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 50%;
+                            background: $color-primary;
+                            content: '';
+                        }
+                        &:hover:after, &:focus:after {
+                            opacity: 0.2;
+                        }
+                        &:checked:after {
+                            opacity: 1;
+                        }
+                    }
+                    label {
+                        font: normal 16px $font-family;
+                    }
+
+                    + .radio {
+                        margin-top: 12px;
+                    }
+                }
+            }
+
+            .control-groups-theme {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+
+                .radio {
+                    flex: 1;
+                    justify-content: center;
+                    position: relative;
+                    width: 50%;
+                    margin: 7px 0 10px;
+
+                    input {
+                        position: absolute;
+                        top: -20px;
+                        left: -20px;
+                        visibility: hidden;
+
+                        &:checked ~ label {
+                            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+                            border-color: $color-primary;
+                        }
+                    }
+                    label {
+                        display: block;
+                        overflow: hidden;
+                        width: 240px;
+                        height: 144px;
+                        margin-left: -4px;
+                        border: 4px solid #FFF;
+                        border-radius: 10px;
+                        background: #AAA;
+                        text-indent: -9999em;
+                        cursor: pointer;
+                    }
+
+                    &.dark label {
+                        background: url('chrome-extension://__MSG_@@extension_id__/img/dark.svg');
+                    }
+                    &.light label {
+                        background: url('chrome-extension://__MSG_@@extension_id__/img/light.svg');
+                    }
+                }
+            }
+        }
+    }
 }

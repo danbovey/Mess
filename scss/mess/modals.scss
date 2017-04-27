@@ -1,0 +1,54 @@
+.Mess-modal {
+    display: none;
+    position: absolute;
+    z-index: 400;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 100%;
+
+    &.active {
+        display: block;
+    }
+
+    .Mess-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .Mess-dialog {
+        display:flex;
+        align-items: center;
+        position: relative;
+        width: 800px;
+        height: calc(100vh - 120px);
+        margin: 60px auto;
+    }
+
+    .Mess-modal-content {
+        width: 100%;
+        background-color: #FFF;
+    }
+
+    .Mess-modal-header {
+        position: relative;
+        height: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        font-weight: 700;
+        text-align: center;
+        line-height: 50px;
+
+        span {
+            font-size: 16px;
+        }
+        button {
+            position: absolute;
+            right: 0;
+            padding: 0 16px;
+        }
+    }
+}
