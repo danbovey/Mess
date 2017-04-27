@@ -69,6 +69,11 @@ $guild-icon-width: 50px;
 
         &:hover, &:focus {
             background: none;
+
+            // Show name tooltip
+            ._1qt5 ._1ht6 {
+                display: block;
+            }
         }
 
         // <a>
@@ -91,8 +96,8 @@ $guild-icon-width: 50px;
             transition: border-radius 0.2s ease-in-out;
         }
 
-        // Friend settings
-        ._5blh {
+        // Friend settings // Read avatar indicator
+        ._5blh, ._2j6 {
             display: none;
         }
 
@@ -143,7 +148,45 @@ $guild-icon-width: 50px;
 
     // Friend name and status
     ._1qt4 {
-        display: none;
+        // Hide the last message / status
+        ._1qt5 {
+            ._1ht6 {
+                box-sizing: border-box;
+                display: none;
+                overflow: visible;
+                position: fixed;
+                z-index: 100;
+                left: 60px;
+                height: 22px;
+                margin-left: 5px;
+                padding: 4px 10px;
+                transform: translateY(-44%);
+                border-radius: 3px;
+                background: $color-primary;
+                font-size: 12px;
+                font-weight: normal;
+                line-height: 12px;
+                color: #FFF;
+
+                &:after {
+                    position: absolute;
+                    right: 100%;
+                    top: 50%;
+                    width: 0;
+                    height: 0;
+                    transform: translateY(-50%);
+                    border-top: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-right: 5px solid $color-primary;
+                    pointer-events: none;
+                    content: '';
+                }
+            }
+
+            + ._1qt5, > div {
+                display: none;
+            }
+        }
     }
 
     // ------------------------------------------------------------

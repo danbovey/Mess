@@ -1,7 +1,7 @@
 let options = {
     theme: 'light',
     chat: {
-        chat_style: true
+        style: 'bubbles'
     }
 };
 

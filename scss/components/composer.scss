@@ -1,4 +1,4 @@
-// Textarea
+// Composer
 ._4rv3 {
     box-sizing: border-box;
     align-items: flex-start;
@@ -54,6 +54,9 @@
 }
 
 .Mess-theme-light {
+    border: none;
+    box-shadow: 0 -1px 0 rgba(#FFF, 0.1);
+
     ._4rv3 {
         ._5irm {
             border-color: #DADDDF;
@@ -64,6 +67,9 @@
 .Mess-theme-dark {
     // Textarea
     ._4rv3 {
+        border-top: 1px solid rgba(#FFF, 0.06);
+        box-shadow: 0 -1px 0 rgba(#000, 0.1);
+
         // Input wrapper
         ._5irm {
             border-color: rgba(#FFF, 0.2);
