@@ -1,15 +1,17 @@
 window.onload = () => {
     console.log('Messenger Discord Skin v1.0.0');
 
-    const conversationsWidth = 57;
+    // Define important elements
+    const els = {
+        conversations: document.querySelector('._1enh'),
+        header: document.querySelector('._5742'),
+        rightSidebar: document.querySelector('._4_j5')
+    };
 
-    // Move the settings icon from the right sidebar to the conversation title
-    const title = document.querySelector('._5742 ._5743');
-    const settingIcon = document.querySelector('._4_j5 ._3-ne');
+    const components = [
+        require('./components/ext-settings'),
+        require('./components/chat-settings')
+    ];
 
-    if(title != null && settingIcon != null) {
-        const leftOffset = title.offsetWidth;
-        settingIcon.style.left = `${leftOffset + 32 + conversationsWidth}px`;
-        settingIcon.style.display = 'block';
-    }
+    components.forEach(c => c(els));
 };

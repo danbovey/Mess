@@ -2,12 +2,18 @@
 @import "global";
 @import "fonts";
 
+// Chat components
 @import "./components/conversations";
 @import "./components/header";
 @import "./components/right-sidebar";
 @import "./components/textarea";
 
-@import "./components/new-conversation";
+// Pages
+@import "./pages/new-conversation";
 
-@import "./components/dropdowns";
-@import "./components/tooltips";
+// Common components
+@import "./common/dropdowns";
+@import "./common/tooltips";
+
+// Mess components
+@import "./mess/ext-settings";

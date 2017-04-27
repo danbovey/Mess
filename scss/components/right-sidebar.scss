@@ -53,22 +53,6 @@ $avatar-width: 32px;
         }
     }
 
-    // Group settings dropdown
-    // Will be moved next to the conversation title by JS
-    ._3-ne {
-        display: none;
-        opacity: 0.75;
-        position: fixed;
-        z-index: 1000;
-        top: 21px;
-        left: 50%;
-
-        // Disable outline on trigger
-        ._5blh {
-            outline: none;
-        }
-    }
-
     // Reduce amount of text in search button
     [data-intl-translation="Search in Conversation"] {
         font-size: 0;

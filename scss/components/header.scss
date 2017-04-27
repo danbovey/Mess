@@ -11,6 +11,7 @@ $action-color: #4F545C;
 
     // Conversation title
     ._5743 {
+        width: initial !important;
         margin-left: 0 !important;
 
         ._3oh- {
@@ -25,10 +26,26 @@ $action-color: #4F545C;
         }
     }
 
+    // Group settings dropdown
+    // Moved into the header by chat-settings.js
+    ._3-ne {
+        opacity: 0.75;
+        margin-left: 10px;
+
+        // Disable outline on trigger
+        ._5blh {
+            outline: none;
+        }
+    }
+
     // Chat actions
     ._fl2 {
+        // Placed in front of the group settings dropdown
+        z-index: 1;
         bottom: initial;
         padding: 0 15px 0 0;
+        // On small screens, this can overlap the title
+        background: #FFF;
 
         li {
             margin-right: 15px;

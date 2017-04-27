@@ -2,7 +2,6 @@
 ._4rv3 {
     box-sizing: border-box;
     align-items: flex-start;
-    height: 96px;
     margin: 0 20px;
     padding: 20px 0 30px;
 
@@ -10,12 +9,16 @@
     ._5irm {
         box-sizing: border-box;
         display: flex;
-        align-items: center;
         min-height: 46px;
         margin: 0 !important;
         padding: 0 10px;
         border: 2px solid #DADDDF;
         border-radius: 3px;
+
+        ._kmc {
+            width: 100%;
+            padding-bottom: 9px;
+        }
 
         // Input
         ._3-8x {
@@ -24,11 +27,22 @@
 
         // Chat actions
         ._4rv4 {
-            padding: 0;
+            justify-content: flex-start;
+        }
+    }
 
-            // Send a like custom emoji
-            ._4rv9 img {
-                float: right;
+    @media(min-width: 952px) {
+        ._5irm {
+            align-items: flex-start;
+
+            // Chat actions
+            ._4rv4 {
+                padding: 5px 0;
+
+                // Send a like custom emoji
+                ._4rv9 img {
+                    float: right;
+                }
             }
         }
     }

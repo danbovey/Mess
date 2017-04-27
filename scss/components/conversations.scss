@@ -67,20 +67,69 @@ $guild-icon-width: 50px;
     ._1ht1 {
         height: 58px;
 
+        &:hover, &:focus {
+            background: none;
+        }
+
+        // <a>
+        ._2il3 {
+            padding-left: 10px;
+        }
+
+        // More square when hovered
+        &:hover {
+            ._4ld- {
+                border-radius: 15px;
+            }
+        }
+
+        // Image
+        ._4ld- {
+            border-radius: 25px;
+            transition: border-radius 0.2s ease-in-out;
+        }
+
         // Friend settings
         ._5blh {
             display: none;
+        }
 
-            ._4ld- {
-                border-radius: 25px;
-                transition: border 0.2s ease-in-out;
-            }
+        // Active conversation & Unread indicators
+        &._1ht2:before, &._1ht3:before {
+            position: absolute;
+            top: 50%;
+            left: -5px;
+            width: 10px;
+            height: 40px;
+            margin-top: -20px;
+            border-radius: 20px;
+            content: '';
         }
 
         // Active conversation
         &._1ht2 {
+            background: none;
+
+            &:before {
+                transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out;
+                height: 40px;
+                border-radius: 20px;
+                background: #FFF;
+                margin-top: -20px;
+            }
+
+            // Avatar becomes more square
             ._4ld- {
                 border-radius: 15px;
+            }
+        }
+        // Unread
+        &._1ht3 {
+            &:before {
+                height: 10px;
+                border-radius: 5px;
+                background: #8A8E94;
+                margin-top: -6px;
             }
         }
     }
