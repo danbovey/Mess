@@ -17,7 +17,8 @@ Storage.load()
 
             const components = [
                 require('./components/ext-settings'),
-                require('./components/chat-settings')
+                require('./components/conversations'),
+                require('./components/chat-settings'),
             ];
 
             components.forEach(c => c(els, Storage));

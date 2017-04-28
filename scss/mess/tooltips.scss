@@ -1,0 +1,27 @@
+.Mess-tooltip {
+    box-sizing: border-box;
+    height: 22px;
+    margin-left: 5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: $color-primary;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    color: #FFF;
+
+    // TODO: [x-placement^="top"] .tooltip-arrow
+    .tooltip-arrow {
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        transform: translateY(-50%);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid $color-primary;
+        pointer-events: none;
+        content: '';
+    }
+}
