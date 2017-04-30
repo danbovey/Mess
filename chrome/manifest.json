@@ -4,7 +4,7 @@
   "name": "Mess",
   "description": "A Discord skin for messenger.com",
   "author": "Dan Bovey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimum_chrome_version": "36",
 
   "options_page": "options.html",

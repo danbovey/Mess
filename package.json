@@ -1,10 +1,10 @@
 {
   "name": "mess",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "Discord skin for messenger.com",
   "main": "src/content.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "gulp"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@
 
 > 💬 A Discord skin for messenger.com
 
-### Coming soon on the Chrome Webstore
+### [Download for Google Chrome](https://chrome.google.com/webstore/detail/mess/hpjbefeabedbcmieiedpnhpngeacjamg)
 
 ## Preview
 
