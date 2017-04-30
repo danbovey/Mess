@@ -81,7 +81,7 @@
                 &:hover:before, &:focus:before {
                     opacity: 1;
                 }
-                &:hover {
+                &.selected, &:hover {
                     opacity: 1;
                 }
             }
@@ -155,6 +155,19 @@
                         border-radius: 50%;
                         cursor: pointer;
 
+                        &:disabled {
+                            &, + label {
+                                opacity: 0.5;
+                                cursor: default;
+                            }
+                            &:hover:after, &:focus:after {
+                                opacity: 0;
+                            }
+                            &:checked:hover:after, &:checked:focus:after {
+                                opacity: 1;
+                            }
+                        }
+
                         &:after {
                             opacity: 0;
                             position: absolute;
@@ -226,6 +239,10 @@
                         background: url('chrome-extension://__MSG_@@extension_id__/img/light.svg');
                     }
                 }
+            }
+
+            .Mess-changelog {
+                margin: 10px 0;
             }
         }
     }

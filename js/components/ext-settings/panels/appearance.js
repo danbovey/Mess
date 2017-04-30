@@ -1,3 +1,5 @@
+const createRadio = require('../radio');
+
 module.exports = Storage => {
     const content = document.createElement('div');
     content.classList.add('Mess-setting-panel');
@@ -13,30 +15,6 @@ module.exports = Storage => {
     controlGroups.classList.add('control-groups', 'control-groups-theme');
 
     // Create theme radio boxes
-    const createRadio = ({ groupName, name, label, checked, onClick }) => {
-        const group = document.createElement('div');
-        group.classList.add('radio', name);
-
-        const id = `Mess-radio-${name}`;
-        const input = document.createElement('input');
-        input.id = id;
-        input.setAttribute('type', 'radio');
-        input.setAttribute('name', groupName);
-        if(checked) {
-            input.setAttribute('checked', 'checked');
-        }
-        input.addEventListener('click', () => onClick(name));
-        group.appendChild(input);
-
-        const lbl = document.createElement('label');
-        lbl.setAttribute('for', id);
-        lbl.textContent = label;
-
-        group.appendChild(lbl);
-
-        return group;
-    };
-
     const handleClickTheme = name => {
         document.body.classList.remove('Mess-theme-light', 'Mess-theme-dark');
         document.body.classList.add(`Mess-theme-${name}`);

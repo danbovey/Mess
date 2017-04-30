@@ -15,8 +15,22 @@
 
 .Mess-theme-dark {
     ._2y8y {
-        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 0 rgba(#000, 0.06);
         border-color: #303337;
         background: #36393E;
+
+        // "To:"
+        ._2y8z {
+            padding-top: 0;
+            color: rgba(#FFF, 0.4);
+        }
+
+        ._58al {
+            color: #FFF;
+            
+            &::placeholder {
+                color: rgba(#FFF, 0.2);
+            }
+        }
     }
 }

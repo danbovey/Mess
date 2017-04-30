@@ -1,7 +1,7 @@
 .Mess-btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: $border-radius;
     background: $color-primary;
     font: 15px $font-family;
     line-height: 15px;

@@ -8,6 +8,8 @@
 @import "./components/right-sidebar";
 @import "./components/composer";
 @import "./components/chat";
+@import "./components/attachments";
+@import "./components/reactions-dialog";
 @import "./components/day-modal";
 
 // Pages
@@ -22,3 +24,15 @@
 @import "./mess/modals";
 @import "./mess/tooltips";
 @import "./mess/ext-settings";
+
+// App while in auth avatar grabbing mode
+.Mess-init {
+    ._1u5d {
+        &, & + div {
+            display: none;
+        }
+    }
+    .uiLayer {
+        display: none;
+    }
+}

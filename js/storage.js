@@ -2,6 +2,9 @@ let options = {
     theme: 'light',
     chat: {
         style: 'bubbles'
+    },
+    text: {
+        emoji: 'facebook'
     }
 };
 

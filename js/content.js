@@ -12,12 +12,13 @@ Storage.load()
             const els = {
                 conversations: document.querySelector('._1enh'),
                 header: document.querySelector('._5742'),
-                rightSidebar: document.querySelector('._4_j5')
+                chat: document.querySelector('._4_j4')
             };
 
             const components = [
                 require('./components/ext-settings'),
                 require('./components/conversations'),
+                require('./components/auth-avatar'),
                 require('./components/chat-settings'),
             ];
 

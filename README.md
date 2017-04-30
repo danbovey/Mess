@@ -1,4 +1,4 @@
-# Messenger Discord skin
+# Mess
 
 > 💬 A Discord skin for messenger.com
 

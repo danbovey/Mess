@@ -1,0 +1,55 @@
+// Chat scroller
+._4_j4 {
+    // Attachment attribution margin fix
+    // Seems to be an actual Messenger bug, so let's fix it
+    ._5z-5 {
+        margin-bottom: 0;
+    }
+
+    // Attachment border-radius
+    ._nd_ ._52mr:not(._3oh-) {
+        border-bottom-left-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+    }
+    ._29_7 ._52mr:not(._3oh-) {
+        border-bottom-right-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+    ._52mr ._4br2 {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+    ._29_7 ._52mr ._mxz,
+    // ._nd_:first-of-type ._3058._52mr:first-of-type:not(._3oh-),
+    ._nd_:first-of-type ._3058._52mr:first-of-type ._mxz,
+    ._nd_:first-of-type ._3058:first-of-type ._52mr,
+    ._nd_:first-of-type ._3058:first-of-type ._52mr ._mxz,
+    ._29_7 ._2n8h ._2n8g:first-child ._4tsk:last-child,
+    ._nd_:first-of-type ._2n8h ._2n8g:first-child ._4tsk:last-child {
+        border-top-right-radius: $border-radius;
+    }
+    ._nd_ ._52mr ._mxz,
+    // ._29_7:first-of-type ._3058._52mr:first-of-type:not(._3oh-),
+    ._29_7:first-of-type ._3058._52mr:first-of-type ._mxz,
+    ._29_7:first-of-type ._3058:first-of-type ._52mr,
+    ._29_7:first-of-type ._3058:first-of-type ._52mr ._mxz,
+    ._nd_ ._2n8h ._2n8g:first-child ._4tsk:first-child,
+    ._29_7:first-of-type ._2n8h ._2n8g:first-child ._4tsk:first-child {
+        border-top-left-radius: $border-radius;
+    }
+    // ._29_7:last-of-type ._3058._52mr:last-of-type:not(._3oh-),
+    ._29_7:last-of-type ._3058._52mr:last-of-type ._4br2,
+    ._29_7:last-of-type ._3058:last-of-type ._52mr,
+    ._29_7:last-of-type ._3058:last-of-type ._52mr ._4br2 {
+        border-bottom-left-radius: $border-radius;
+    }
+    ._29_7 ._52mr ._4br2,
+    // ._nd_:last-of-type ._3058._52mr:last-of-type:not(._3oh-),
+    ._nd_:last-of-type ._3058._52mr:last-of-type ._4br2,
+    ._nd_:last-of-type ._3058:last-of-type ._52mr,
+    ._nd_:last-of-type ._3058:last-of-type ._52mr ._4br2,
+    ._29_7 ._2n8h ._2n8g:last-child ._4tsk:last-child,
+    ._nd_:last-of-type ._2n8h ._2n8g:last-child ._4tsk:last-child {
+        border-bottom-right-radius: $border-radius;
+    }
+}

@@ -3,6 +3,9 @@
     ._ih3 {
         margin-bottom: 3px;
     }
+    ._1wfr {
+        padding-left: 20px;
+    }
 
     // On larger screens, reduce chat font size from 16px
     @media(min-width: 1600px) {
@@ -12,20 +15,185 @@
     }
 }
 
+.Mess-chat_style-bubbles {
+    // Chat scroller
+    ._4_j4 {
+        // Hide user's avatar with right-aligned bubbles
+        .Mess-auth-avatar {
+            display: none;
+        }
+    }
+}
+
 .Mess-chat_style-irc {
-    // My bubbles
-    ._o46._3i_m ._3058 {
-        float: left !important;
+    $avatar-width: 40px;
+    $message-padding: 20px;
+
+    // Chat scroller
+    ._4_j4 {
+        // Date break
+        ._497p {
+            margin-top: 0;
+        }
+
+        // Group of messages
+        ._41ud {
+            margin: 0;
+            padding: $message-padding 0;
+            border-top: 1px solid transparent;
+        }
+        // Other message group
+        ._1t_p {
+            margin-bottom: 0;
+        }
+
+        // Make a chat message fill the width
+        ._3058._52mr {
+            max-width: 90% !important;
+        }
+
+        // Message left offset
+        ._41ud {
+            margin-left: $avatar-width + 20px;
+        }
+
+        // All bubbles
+        ._hh7 {
+            margin: 6px 0 0;
+            padding: 0;
+            background: none !important;
+
+            a {
+                color: $color-primary !important;
+            }
+        }
+        
+        // Attachment container
+        ._3058._15gf {
+            margin-top: 4px;
+        }
+        
+
+        // My messages
+        ._nd_ {
+            // Bubbles Actions container
+            ._hh7,
+            ._40fu {
+                float: left !important;
+            }
+        }
+        // My Share attachment
+        ._o46._3i_m ._3058._15gf ._2poz, ._o46._3i_m ._3zvs {
+            float: left !important;
+        }
+
+        // Sender name
+        ._ih3 {
+            margin: 0;
+            padding-left: 0;
+            font-size: 15px;
+        }
+
+        // Sender avatar
+        ._1t_q {
+            ._1t_r {
+                top: $message-padding;
+                bottom: initial;
+            }
+            // Sender avatar divs, img
+            ._4ldz, ._4ld-, ._4ld- img {
+                width: $avatar-width !important;
+                height: $avatar-width !important;
+                max-width: none !important;
+                max-height: none !important;
+            }
+        }
+
+        // Chat reaction
+        ._4kf7 {
+            justify-content: initial;
+            position: static;
+            left: 0;
+            margin-top: 6px;
+            margin-left: -2px;
+        }
+        // Text message reaction
+        ._3058._3oh- + ._40fu ._2u_d {
+            transform: translate(15%, -30%);
+        }
+        // Attachment chat reaction
+        ._2poz + ._4kf7 {
+            justify-content: flex-end;
+            position: absolute;
+            left: initial;
+        }
+        // Message with chat reaction?
+        ._1nc7:not(:last-of-type) ._5z-5, ._1nc6:not(:last-of-type) ._5z-5, ._3erg:not(:last-of-type) ._5z-5 {
+            margin-bottom: 0;
+        }
+
+        // My message actions
+        ._nd_ ._2u_d {
+            flex-direction: row;
+            transform: translate(15%, -50%);
+        }
     }
 
-    // Make a chat message fill the width
-    ._52mr {
-        max-width: 90% !important;
+    &.Mess-theme-light {
+        // Chat scroller
+        ._4_j4 {
+            // Group of messages
+            ._41ud {
+                border-color: #ECEEEF;
+            }
+
+            // All bubbles
+            ._hh7 {
+                color: darken(#737F8D, 10%);
+            }
+        }
+    }
+
+    &.Mess-theme-dark {
+        // Chat scroller
+        ._4_j4 {
+            // Group of messages
+            ._41ud {
+                border-color: rgba(#FFF, 0.04);
+            }
+
+            // Attachment attribution
+            ._2f5n {
+                background: #1F1F1F;
+                
+                ._29ey {
+                    color: rgba( #FFF, 0.6);
+                }
+            }
+
+            // All bubbles
+            ._hh7 {
+                color: rgba(#FFF, 0.7);
+
+                a {
+                    color: $color-primary;
+                }
+            }
+
+            // Chat reaction
+            ._4kf7 {
+                // Button
+                ._aou, ._4kf5 {
+                    background: #000;
+                    color: #9D9D9D;
+                }
+            }
+        }
     }
 }
 
 .Mess-theme-light {
-
+    
 }
 
 .Mess-theme-dark {
@@ -34,9 +202,11 @@
         background: #36393E;
     }
 
+    // Chat scroller
     ._4_j4 {
         // Person who sent the message, Date break
-        ._ih3, ._497p {
+        ._ih3,
+        ._497p {
             color: #707578;
         }
 
@@ -47,7 +217,8 @@
                 color: #707578;
             }
             // Name
-            ._llq, ._36zg {
+            ._llq,
+            ._36zg {
                 color: #AAA;
             }
         }

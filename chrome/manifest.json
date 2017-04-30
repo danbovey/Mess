@@ -10,7 +10,8 @@
   "permissions": [
     "storage",
     "*://*.messenger.com/*",
-    "*://fonts.gstatic.com/*"
+    "*://fonts.gstatic.com/*",
+    "*://raw.githubusercontent.com/danbovey/Mess/*"
   ],
 
   "content_scripts": [ {

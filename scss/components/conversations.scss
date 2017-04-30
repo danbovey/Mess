@@ -19,7 +19,8 @@ $guild-icon-width: 50px;
         padding: 0 !important;
 
         // Settings, // Back to recent messages
-        ._4kzu, ._2oc9 {
+        ._4kzu,
+        ._2oc9 {
             box-sizing: border-box;
             display: block !important;
             opacity: 0.7;
@@ -92,12 +93,14 @@ $guild-icon-width: 50px;
         }
 
         // Friend settings // Read avatar indicator
-        ._5blh, ._2j6 {
+        ._5blh,
+        ._2j6 {
             display: none;
         }
 
         // Active conversation & Unread indicators
-        &._1ht2:before, &._1ht3:before {
+        &._1ht2:before,
+        &._1ht3:before {
             position: absolute;
             top: 50%;
             left: -5px;
@@ -165,7 +168,8 @@ $guild-icon-width: 50px;
         background: none;
 
         // My avatar, My name
-        ._ohe, ._1u5i {
+        ._ohe,
+        ._1u5i {
             display: none;
         }
 

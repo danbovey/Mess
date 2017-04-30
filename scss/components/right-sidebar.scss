@@ -18,7 +18,10 @@ $avatar-width: 32px;
     }
 
     // Conversation info, Section title, Options, Add people
-    ._1jt6, ._1lj0, ._3szn, ._4rph {
+    ._1jt6,
+    ._1lj0,
+    ._3szn,
+    ._4rph {
         padding-left: $padding;
         padding-right: $padding;
     }
@@ -100,7 +103,11 @@ $avatar-width: 32px;
         color: $text-color;
 
         // Conversation text edit, Section title, Options text, Add People, People
-        ._2jnv, ._1lj0, ._3szn ._4qba, ._4rph ._4rpj, ._364g {
+        ._2jnv,
+        ._1lj0,
+        ._3szn ._4qba,
+        ._4rph ._4rpj,
+        ._364g {
             color: $text-color;
         }
 

@@ -25,6 +25,8 @@ module.exports = Storage => {
     const contribute = document.createElement('p');
     const link = document.createElement('a');
     link.setAttribute('href', 'http://github.com/danbovey/Mess');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener');
     link.textContent = 'Contribute on GitHub!';
     contribute.appendChild(link);
     helpTranslate.appendChild(contribute);

@@ -13,7 +13,7 @@
         margin: 0 !important;
         padding: 0 10px;
         border: 2px solid transparent;
-        border-radius: 3px;
+        border-radius: $border-radius;
 
         ._kmc {
             width: 100%;
@@ -86,7 +86,8 @@
             }
 
             // Sticker action, Game action
-            ._4rv6, ._4ce_ {
+            ._4rv6,
+            ._4ce_ {
                 opacity: 1;
                 background-image: url('chrome-extension://__MSG_@@extension_id__/img/chat-actions.png');
             }
