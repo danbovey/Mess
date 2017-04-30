@@ -1,5 +1,7 @@
 const Storage = require('./storage');
 
+const optionsPage = window.location.href.indexOf('mess-settings') > -1;
+
 Storage.load()
     .then(options => {
         document.body.classList.add(
@@ -22,6 +24,13 @@ Storage.load()
                 require('./components/chat-settings'),
             ];
 
-            components.forEach(c => c(els, Storage));
+            components.forEach(c => {
+                const component = c(els, Storage);
+                if(component) {
+                    if(component.name == 'ext-settings' && optionsPage) {
+                        component.modal.open();
+                    }
+                }
+            });
         };
     });

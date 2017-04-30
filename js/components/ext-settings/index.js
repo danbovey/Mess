@@ -103,4 +103,6 @@ module.exports = (els, Storage) => {
     doneBtn.textContent = 'Done';
     doneBtn.addEventListener('click', modal.close);
     actions.appendChild(doneBtn);
+
+    return { name: 'ext-settings', modal };
 };
