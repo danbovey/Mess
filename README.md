@@ -1,3 +1,5 @@
+![Logo](http://i.imgur.com/KwrFUX6.png)
+
 # Mess
 
 > 💬 A Discord skin for messenger.com
