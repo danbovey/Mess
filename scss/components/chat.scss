@@ -38,7 +38,8 @@
 
         // Group of messages
         ._41ud {
-            margin: 0;
+            // Message left offset
+            margin: 0 0 0 $avatar-width + 20px;
             padding: $message-padding 0;
             border-top: 1px solid transparent;
         }
@@ -50,11 +51,6 @@
         // Make a chat message fill the width
         ._3058._52mr {
             max-width: 90% !important;
-        }
-
-        // Message left offset
-        ._41ud {
-            margin-left: $avatar-width + 20px;
         }
 
         // All bubbles
@@ -72,8 +68,19 @@
         ._3058._15gf {
             margin-top: 4px;
         }
-        
 
+        // My avatar
+        .Mess-auth-avatar {
+            // Some messages auth avatars have translateY(-50%)
+            ._1t_r {
+                transform: none;
+            }
+        }
+        // My name
+        ._1t_p ._-ne {
+            height: initial;
+            opacity: 1;
+        }
         // My messages
         ._nd_ {
             // Bubbles Actions container
@@ -82,8 +89,9 @@
                 float: left !important;
             }
         }
-        // My Share attachment
-        ._o46._3i_m ._3058._15gf ._2poz, ._o46._3i_m ._3zvs {
+        // My Share attachment, My video
+        ._o46._3i_m ._3058._15gf ._2poz, ._o46._3i_m ._3zvs,
+        ._o46._3i_m ._3058 {
             float: left !important;
         }
 
@@ -132,9 +140,13 @@
             margin-bottom: 0;
         }
 
+        // My message actions, User has replied to a Day
+        ._nd_ ._2u_d,
+        ._5yn._5yo {
+            flex-direction: row;
+        }
         // My message actions
         ._nd_ ._2u_d {
-            flex-direction: row;
             transform: translate(15%, -50%);
         }
     }
@@ -160,15 +172,6 @@
             // Group of messages
             ._41ud {
                 border-color: rgba(#FFF, 0.04);
-            }
-
-            // Attachment attribution
-            ._2f5n {
-                background: #1F1F1F;
-                
-                ._29ey {
-                    color: rgba( #FFF, 0.6);
-                }
             }
 
             // All bubbles
@@ -224,9 +227,70 @@
         }
     }
 
+    // Attachment attribution, Link preview text block, Another type of link preview
+    ._2f5n,
+    ._5i_d ._5swm,
+     ._tih._49ou._310t {
+        background: rgba(#212121, 0.2);
+        
+        ._29ey {
+            color: rgba( #FFF, 0.6);
+        }
+    }
+    
+    // Share text, Link preview title and description
+    .__6k, .__6l,
+    ._5i_d .__6k, ._5i_d .__6l {
+        color: #E2DED6;
+    }
+    // Share URL/subtitle, Link preview URL/subtitle
+    .__6m,
+    ._5i_d .__6m {
+        color: #6F6B63
+    }
+
+    // Poll, RTC Attachment (Phone call)
+    ._3b4t, ._55q._5i_d._52mr {
+        background: rgba(0, 0, 0, 0.1);
+
+        // "Poll" heading, Phone call title
+        ._3b4u ._4qba,
+        ._50f7 {
+            color: rgba(#FFF, 0.75);
+        }
+        // Voter avatar
+        ._4mnq {
+            border-color: #2F2F2F;
+        }
+    }
+
+    // Chat reactions/poll vote/etc dialog
+    ._53ij {
+        background: #000;
+
+        // Poll text
+        ._1mr_ {
+            color: #FFF;
+        }
+
+        // Poll radio
+        ._2m5p {
+            border-color: rgba(#FFF, 0.2);
+        }
+        // Poll radio label
+        ._1mq- {
+            color: rgba(#FFF, 0.7);
+        }
+
+        // Voter avatar {
+        ._4mnq {
+            border-color: #000;
+        }
+    }
+
     &.Mess-chat_style-bubbles {
-        // Other people's bubble
-        ._29_7 ._hh7 {
+        // Other people's bubble (not emoji only message)
+        ._29_7 ._hh7:not(._581a) {
             background: rgba(#FFF, 0.2);
         }
     }

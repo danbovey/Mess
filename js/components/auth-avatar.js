@@ -53,7 +53,11 @@ module.exports = els => {
         if(aChat) {
             const avatarEl = aChat.cloneNode(true);
             avatarEl.classList.add('Mess-auth-avatar');
-            avatarEl.querySelector('a').removeAttribute('href');
+            // The link to the contact's profile only exists in group conversations
+            const link = avatarEl.querySelector('a');
+            if(link) {
+                avatarEl.querySelector('a').removeAttribute('href');
+            }
             avatarEl.querySelector('._4ldz').dataset.tooltipContent = `${name}`;
             const img = avatarEl.querySelector('img');
             img.setAttribute('alt', name);
