@@ -6,7 +6,7 @@ module.exports = Storage => {
     const group = document.createElement('div');
     group.classList.add('Mess-setting-group');
     let heading = document.createElement('h4');
-    heading.textContent = 'Change Log';
+    heading.textContent = chrome.i18n.getMessage('settings_changelog');
     group.appendChild(heading);
     content.appendChild(group);
 

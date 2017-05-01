@@ -1,0 +1,111 @@
+{
+  "settings_title": {
+    "message": "Mess Settings",
+    "description": "Settings for the extension"
+  },
+  "settings_done": {
+    "message": "Done",
+    "description": "I am done editing the extension settings"
+  },
+  "settings_appearance": {
+    "message": "Appearance",
+    "description": "Category for extension appearance settings"
+  },
+  "settings_appearance_theme": {
+    "message": "Theme",
+    "description": "Setting for selecting a theme"
+  },
+  "settings_appearance_theme_dark": {
+    "message": "Dark",
+    "description": "Dark theme"
+  },
+  "settings_appearance_theme_light": {
+    "message": "Light",
+    "description": "Light theme"
+  },
+  "settings_appearance_chatstyle": {
+    "message": "Message display",
+    "description": "Setting for choosing a message display type"
+  },
+  "settings_appearance_chatstyle_irc": {
+    "message": "Discord: IRC-style left-aligned messages",
+    "description": "Label for IRC-style chat"
+  },
+  "settings_appearance_chatstyle_bubbles": {
+    "message": "Bubbles: Messenger-style chat bubbles",
+    "description": "Label for Bubble-style chat"
+  },
+
+  "settings_text": {
+    "message": "Text & Images",
+    "description": "Category for extension text & image settings"
+  },
+  "settings_text_emoji": {
+    "message": "Emoji style",
+    "description": "Setting for choosing emoji style"
+  },
+  "settings_text_emoji_facebook": {
+    "message": "Facebook Style",
+    "description": "Label for Facebook style emoji set"
+  },
+  "settings_text_emoji_apple": {
+    "message": "Apple/International Style",
+    "description": "Label for Apple style emoji set"
+  },
+  "settings_text_emoji_twitter": {
+    "message": "Twitter Style",
+    "description": "Label for Twitter style emoji set"
+  },
+  "settings_text_emoji_emojione": {
+    "message": "Emoji One Style",
+    "description": "Label for Emoji One style emoji set"
+  },
+
+  "settings_locale": {
+    "message": "Locale",
+    "description": "Category for extension language settings"
+  },
+  "settings_locale_language": {
+    "message": "Language",
+    "description": "Setting for choosing a language"
+  },
+  "settings_locale_help": {
+    "message": "Help translate Mess",
+    "description": "Title asking people whether they can help translate the extension"
+  },
+  "settings_locale_help_action": {
+    "message": "Contribute on GitHub!",
+    "description": "Link to where people can contribute to the extension on GitHub"
+  },
+
+  "settings_support": {
+    "message": "Support Mess",
+    "description": "Category for extension support page"
+  },
+  "settings_support_issues": {
+    "message": "Issues or feedback?",
+    "description": "Title asking people whether they have problems with the extension"
+  },
+  "settings_support_issues_action": {
+    "message": "Submit a bug or feature request on GitHub",
+    "description": "Link to where people can submit an issue or feedback"
+  },
+  "settings_support_tipjar": {
+    "message": "Tip jar",
+    "description": "Title for donating to the development of the extension"
+  },
+  "settings_support_tipjar_about": {
+    "message": "A tip jar to support the development of Mess is in the works!",
+    "description": "Explains current status of the tip jar"
+  },
+  
+  "settings_changelog": {
+    "message": "Change Log",
+    "description": "Category for viewing the extension change log"
+  },
+
+  "menu_activecontacts": {
+    "message": "Active contacts",
+    "description": "The string Messenger use to describe online contacts in the settings menu"
+  }
+}

@@ -6,7 +6,7 @@ module.exports = Storage => {
     const submitBug = document.createElement('div');
     submitBug.classList.add('Mess-setting-group');
     let heading = document.createElement('h4');
-    heading.textContent = 'Issues or feedback?';
+    heading.textContent = chrome.i18n.getMessage('settings_support_issues');
     submitBug.appendChild(heading);
 
     let p = document.createElement('p');
@@ -14,7 +14,7 @@ module.exports = Storage => {
     link.setAttribute('href', 'http://github.com/danbovey/Mess/issues');
     link.setAttribute('target', '_blank');
     link.setAttribute('rel', 'noopener');
-    link.textContent = 'Submit a bug or feature request on GitHub';
+    link.textContent = chrome.i18n.getMessage('settings_support_issues_action');
     p.appendChild(link);
     submitBug.appendChild(p);
 
@@ -26,10 +26,10 @@ module.exports = Storage => {
     const tipJar = document.createElement('div');
     tipJar.classList.add('Mess-setting-group');
     heading = document.createElement('h4');
-    heading.textContent = 'Tip jar';
+    heading.textContent = chrome.i18n.getMessage('settings_support_tipjar');
     tipJar.appendChild(heading);
     p = document.createElement('p');
-    p.textContent = 'A tip jar to support the development of Mess is in the works!';
+    p.textContent = chrome.i18n.getMessage('settings_support_tipjar_about');
     tipJar.appendChild(p);
     content.appendChild(tipJar);
 

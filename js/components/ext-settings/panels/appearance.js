@@ -8,7 +8,7 @@ module.exports = Storage => {
     const theme = document.createElement('div');
     theme.classList.add('Mess-setting-group');
     let heading = document.createElement('h4');
-    heading.textContent = 'Theme';
+    heading.textContent = chrome.i18n.getMessage('settings_appearance_theme');
     theme.appendChild(heading);
 
     let controlGroups = document.createElement('div');
@@ -24,14 +24,14 @@ module.exports = Storage => {
     controlGroups.appendChild(createRadio({
         groupName: 'theme',
         name: 'dark',
-        label: 'Dark',
+        label: chrome.i18n.getMessage('settings_appearance_theme_dark'),
         checked: currTheme == 'dark',
         onClick: handleClickTheme
     }));
     controlGroups.appendChild(createRadio({
         groupName: 'theme',
         name: 'light',
-        label: 'Light',
+        label: chrome.i18n.getMessage('settings_appearance_theme_light'),
         checked: currTheme == 'light',
         onClick: handleClickTheme
     }));
@@ -45,7 +45,7 @@ module.exports = Storage => {
     const messageDisplay = document.createElement('div');
     theme.classList.add('Mess-setting-group');
     heading = document.createElement('h4');
-    heading.textContent = 'Message display';
+    heading.textContent = chrome.i18n.getMessage('settings_appearance_chatstyle');
     messageDisplay.appendChild(heading);
 
     controlGroups = document.createElement('div');
@@ -60,14 +60,14 @@ module.exports = Storage => {
     controlGroups.appendChild(createRadio({
         groupName: 'chat_style',
         name: 'irc',
-        label: 'Discord: IRC-style left-aligned messages',
+        label: chrome.i18n.getMessage('settings_appearance_chatstyle_irc'),
         checked: currChatStyle == 'irc',
         onClick: handleClickChatStyle
     }));
     controlGroups.appendChild(createRadio({
         groupName: 'chat_style',
         name: 'bubbles',
-        label: 'Bubbles: Messenger-style chat bubbles',
+        label: chrome.i18n.getMessage('settings_appearance_chatstyle_bubbles'),
         checked: currChatStyle == 'bubbles',
         onClick: handleClickChatStyle
     }));

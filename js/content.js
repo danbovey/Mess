@@ -1,4 +1,4 @@
-const Storage = require('./storage');
+const Storage = require('./utils/storage');
 
 const optionsPage = window.location.href.indexOf('mess-settings') > -1;
 

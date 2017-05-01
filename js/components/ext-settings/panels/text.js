@@ -8,48 +8,30 @@ module.exports = Storage => {
     const emojiStyle = document.createElement('div');
     emojiStyle.classList.add('Mess-setting-group');
     let heading = document.createElement('h4');
-    heading.textContent = 'Emoji Style';
+    heading.textContent = chrome.i18n.getMessage('settings_text_emoji');
     emojiStyle.appendChild(heading);
 
     let controlGroups = document.createElement('div');
     controlGroups.classList.add('control-groups');
 
     const handleEmojiClick = name => {
-
+        
     };
     const currEmoji = Storage.get().text.emoji;
-    controlGroups.appendChild(createRadio({
-        groupName: 'emoji',
-        name: 'facebook',
-        label: 'Facebook Style',
-        checked: currEmoji == 'facebook',
-        disabled: true,
-        onClick: handleEmojiClick
-    }));
-    controlGroups.appendChild(createRadio({
-        groupName: 'emoji',
-        name: 'apple',
-        label: 'Apple/International Style',
-        checked: currEmoji == 'apple',
-        disabled: true,
-        onClick: handleEmojiClick
-    }));
-    controlGroups.appendChild(createRadio({
-        groupName: 'emoji',
-        name: 'twitter',
-        label: 'Twitter Style',
-        checked: currEmoji == 'twitter',
-        disabled: true,
-        onClick: handleEmojiClick
-    }));
-    controlGroups.appendChild(createRadio({
-        groupName: 'emoji',
-        name: 'emojione',
-        label: 'Emoji One Style',
-        checked: currEmoji == 'emojione',
-        disabled: true,
-        onClick: handleEmojiClick
-    }));
+    const createEmojiRadio = name => {
+        controlGroups.appendChild(createRadio({
+            groupName: 'emoji',
+            name,
+            label: chrome.i18n.getMessage(`settings_text_emoji_${name}`),
+            checked: currEmoji == name,
+            disabled: true,
+            onClick: handleEmojiClick
+        }));
+    };
+    createEmojiRadio('facebook');
+    createEmojiRadio('apple');
+    createEmojiRadio('twitter');
+    createEmojiRadio('emojione');
 
     emojiStyle.appendChild(controlGroups);
     content.appendChild(emojiStyle);

@@ -12,7 +12,7 @@ module.exports = (els, Storage) => {
     const sidebar = document.createElement('div');
     sidebar.classList.add('settings-sidebar');
     const header = document.createElement('h3');
-    header.textContent = 'Mess Settings';
+    header.textContent = chrome.i18n.getMessage('settings_title');
     sidebar.appendChild(header);
     settingsDiv.appendChild(sidebar);
 
@@ -30,27 +30,27 @@ module.exports = (els, Storage) => {
     const items = [
         {
             name: 'appearance',
-            label: 'Apperance',
+            label: chrome.i18n.getMessage('settings_appearance'),
             panel: require('./panels/appearance')(Storage)
         },
         {
             name: 'text',
-            label: 'Text & Images',
+            label: chrome.i18n.getMessage('settings_text'),
             panel: require('./panels/text')(Storage)
         },
         {
             name: 'locale',
-            label: 'Locale',
+            label: chrome.i18n.getMessage('settings_locale'),
             panel: require('./panels/locale')(Storage)
         },
         {
             name: 'support',
-            label: 'Support Mess',
+            label: chrome.i18n.getMessage('settings_support'),
             panel: require('./panels/support')(Storage)
         },
         {
             name: 'changelog',
-            label: 'Change Log',
+            label: chrome.i18n.getMessage('settings_changelog'),
             panel: require('./panels/changelog')(Storage),
             small: true
          }
@@ -90,7 +90,6 @@ module.exports = (els, Storage) => {
     sidebar.querySelector('.sidebar-item').classList.add('selected');
 
     const modal = Modal({
-        title: 'Mess Settings',
         className: 'Mess-ext-settings',
         content: settingsDiv
     });
@@ -100,7 +99,7 @@ module.exports = (els, Storage) => {
     // Close the modal with the Done button inside settings
     const doneBtn = document.createElement('button');
     doneBtn.classList.add('Mess-btn');
-    doneBtn.textContent = 'Done';
+    doneBtn.textContent = chrome.i18n.getMessage('settings_done');
     doneBtn.addEventListener('click', modal.close);
     actions.appendChild(doneBtn);
 

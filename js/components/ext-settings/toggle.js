@@ -30,7 +30,7 @@ module.exports = (els, modal) => {
 
                 modal.open();
             });
-            action.querySelector('span').textContent = 'Mess Settings';
+            action.querySelector('span').textContent = chrome.i18n.getMessage('settings_title');
             ul.insertBefore(action, ul.firstChild);
 
             settingsBtn.removeEventListener('click', injectExtSettings);
