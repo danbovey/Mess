@@ -1,4 +1,5 @@
 module.exports = ({
+    type = 'radio',
     groupName,
     name,
     label,
@@ -7,12 +8,12 @@ module.exports = ({
     disabled
 }) => {
     const group = document.createElement('div');
-    group.classList.add('radio', name);
+    group.classList.add(type, name);
 
-    const id = `Mess-radio-${name}`;
+    const id = `Mess-${type}-${name}`;
     const input = document.createElement('input');
     input.id = id;
-    input.setAttribute('type', 'radio');
+    input.setAttribute('type', type);
     input.setAttribute('name', groupName);
     if(checked) {
         input.setAttribute('checked', 'checked');

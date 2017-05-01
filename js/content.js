@@ -22,6 +22,7 @@ Storage.load()
                 require('./components/conversations'),
                 require('./components/auth-avatar'),
                 require('./components/chat-settings'),
+                require('./components/imgur-gifv')
             ];
 
             components.forEach(c => {

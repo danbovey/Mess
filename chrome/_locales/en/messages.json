@@ -61,6 +61,14 @@
     "message": "Emoji One Style",
     "description": "Label for Emoji One style emoji set"
   },
+  "settings_text_images": {
+    "message": "Image attachments",
+    "description": "Setting for Images"
+  },
+  "settings_text_images_imgurgifv": {
+    "message": "Auto-expand large Imgur GIFV attachments",
+    "description": "Label to toggle previewing Imgur GIFs"
+  },
 
   "settings_locale": {
     "message": "Locale",

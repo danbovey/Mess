@@ -32,9 +32,32 @@ module.exports = Storage => {
     createEmojiRadio('apple');
     createEmojiRadio('twitter');
     createEmojiRadio('emojione');
-
     emojiStyle.appendChild(controlGroups);
     content.appendChild(emojiStyle);
+
+    const hr = document.createElement('hr');
+    content.appendChild(hr);
+
+    const images = document.createElement('div');
+    images.classList.add('Mess-setting-group');
+    heading = document.createElement('h4');
+    heading.textContent = chrome.i18n.getMessage('settings_text_images');
+    images.appendChild(heading);
+
+    controlGroups = document.createElement('div');
+    controlGroups.classList.add('control-groups');
+    controlGroups.appendChild(createRadio({
+        type: 'checkbox',
+        groupName: 'imgur_gifv',
+        name: 'imgur_gifv',
+        label: chrome.i18n.getMessage(`settings_text_images_imgurgifv`),
+        checked: Storage.get().text.imgur_gifv,
+        onClick: () => Storage.set({
+            text: { imgur_gifv: !Storage.get().text.imgur_gifv }
+        })
+    }));
+    images.appendChild(controlGroups);
+    content.appendChild(images);
 
     return content;
 };

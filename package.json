@@ -33,6 +33,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "assign-deep": "^0.4.5",
     "tooltip.js": "^1.1.2"
   }
 }
