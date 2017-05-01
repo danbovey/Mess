@@ -23,7 +23,8 @@ module.exports = els => {
                 let found  = false;
                 [].forEach.call(items, item => {
                     const text = item.querySelector('._54nh');
-                    if(!found && text && text.textContent == 'Active contacts') {
+                    const activeContacts = chrome.i18n.getMessage('menu_activecontacts').toLowerCase();
+                    if(!found && text && text.textContent.toLowerCase() == activeContacts) {
                         found = true;
                         // Click on the active contacts menu
                         item.querySelector('a').click();
