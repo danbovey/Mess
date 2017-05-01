@@ -1,0 +1,71 @@
+{
+  "settings_title": {
+    "message": "Configuración de Mess"
+  },
+  "settings_done": {
+    "message": "Hecho"
+  },
+  
+  "settings_appearance": {
+    "message": "Apariencia"
+  },
+  "settings_appearance_theme": {
+    "message": "Tema"
+  },
+  "settings_appearance_theme_dark": {
+    "message": "Oscuro"
+  },
+  "settings_appearance_theme_light": {
+    "message": "Luz"
+  },
+  "settings_appearance_chatstyle": {
+    "message": "Visualización de mensajes"
+  },
+
+  "settings_text": {
+    "message": "Texto e Imágenes"
+  },
+  "settings_text_emoji": {
+    "message": "Estilo emoji"
+  },
+  "settings_text_emoji_facebook": {
+    "message": "Estilo de Facebook"
+  },
+  "settings_text_emoji_twitter": {
+    "message": "Twitter Estilo"
+  },
+  "settings_text_emoji_emojione": {
+    "message": "Emoji One Estilo"
+  },
+
+  "settings_locale": {
+    "message": "Lugar"
+  },
+  "settings_locale_language": {
+    "message": "Idioma"
+  },
+  "settings_locale_help": {
+    "message": "Ayude a traducir la extensión"
+  },
+  "settings_locale_help_action": {
+    "message": "¡Contribuya con GitHub!"
+  },
+
+  "settings_support": {
+    "message": "Apoye Mess"
+  },
+  "settings_support_issues": {
+    "message": "¿Problemas o comentarios?"
+  },
+  "settings_support_tipjar": {
+    "message": "Tarro de punta"
+  },
+
+  "settings_changelog": {
+    "message": "Registro de cambios"
+  },
+
+  "menu_activecontacts": {
+    "message": "Contactos activos"
+  }
+}

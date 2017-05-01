@@ -10,11 +10,17 @@ module.exports = Storage => {
     const langHeading = document.createElement('h4');
     langHeading.textContent = chrome.i18n.getMessage('settings_locale_language');
     language.appendChild(langHeading);
+
+    let localeCode = chrome.i18n.getMessage('@@ui_locale');
     const locale = flags[chrome.i18n.getMessage('@@ui_locale')];
+    if(locale.code) {
+        localeCode = locale.code;
+    }
+
     const flag = document.createElement('img');
     flag.classList.add('Mess-flag');
-    flag.setAttribute('src', `https://flagpedia.net/data/flags/normal/${locale.code}.png`);
-    flag.setAttribute('alt', chrome.i18n.getMessage('@@ui_locale'));
+    flag.setAttribute('src', `https://flagpedia.net/data/flags/normal/${localeCode}.png`);
+    flag.setAttribute('alt', locale.name);
     language.appendChild(flag);
     const languageName = document.createElement('span');
     languageName.textContent = locale.name;

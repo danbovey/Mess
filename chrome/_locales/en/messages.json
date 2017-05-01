@@ -7,6 +7,7 @@
     "message": "Done",
     "description": "I am done editing the extension settings"
   },
+  
   "settings_appearance": {
     "message": "Appearance",
     "description": "Category for extension appearance settings"

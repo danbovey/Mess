@@ -1,0 +1,68 @@
+{
+  "settings_title": {
+    "message": "Paramètres de Mess"
+  },
+  "settings_done": {
+    "message": "D'accord!"
+  },
+
+  "settings_appearance": {
+    "message": "Apparence"
+  },
+  "settings_appearance_theme": {
+    "message": "Thème"
+  },
+  "settings_appearance_theme_dark": {
+    "message": "Noir"
+  },
+  "settings_appearance_theme_light": {
+    "message": "Lumière"
+  },
+  "settings_appearance_chatstyle": {
+    "message": "Affichage des messages"
+  },
+
+  "settings_text": {
+    "message": "Texte et images"
+  },
+  "settings_text_emoji": {
+    "message": "Style Emoji"
+  },
+  "settings_text_emoji_facebook": {
+    "message": "Style Facebook"
+  },
+  "settings_text_emoji_twitter": {
+    "message": "Style Twitter"
+  },
+
+  "settings_locale": {
+    "message": "Lieu"
+  },
+  "settings_locale_language": {
+    "message": "Langue"
+  },
+  "settings_locale_help": {
+    "message": "Aidez-vous à traduire l'extension"
+  },
+  "settings_locale_help_action": {
+    "message": "Contribuer sur GitHub!"
+  },
+
+  "settings_support": {
+    "message": "Soutenez Mess"
+  },
+  "settings_support_issues": {
+    "message": "Problèmes ou commentaires?"
+  },
+  "settings_support_tipjar": {
+    "message": "Astuce"
+  },
+
+  "settings_changelog": {
+    "message": "Journal des modifications"
+  },
+
+  "menu_activecontacts": {
+    "message": "Contacts actifs"
+  }
+}

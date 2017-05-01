@@ -1,6 +1,5 @@
 {
   "menu_activecontacts": {
-    "message": "Active Contacts",
-    "description": "The string Messenger use to describe online contacts in the settings menu"
+    "message": "Active Contacts"
   }
 }
