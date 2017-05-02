@@ -1,6 +1,9 @@
 const Tooltip = require('tooltip.js');
 
-module.exports = els => {
+/**
+ * Check for conversations that need tooltips every 5 seconds
+ */
+module.exports = (els, Storage, interval = true) => {
     const addTooltip = (el, text) => {
         new Tooltip(el, {
             placement: 'right',
@@ -43,8 +46,11 @@ module.exports = els => {
             }
         });
     };
-    checkTooltips();
 
-    // Check for conversations that need tooltips every 5 seconds
-    window.setInterval(checkTooltips, 5000);
+    if(interval) {
+        checkTooltips();
+        window.setInterval(checkTooltips, 5000);
+    }
+
+    return checkTooltips;
 };

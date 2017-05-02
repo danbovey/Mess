@@ -4,6 +4,8 @@ const optionsPage = window.location.href.indexOf('mess-settings') > -1;
 
 Storage.load()
     .then(options => {
+        // Add theme classes early to theme Messenger
+        // before the majority of content loads
         document.body.classList.add(
             `Mess-theme-${options.theme}`,
             options.chat.style == 'bubbles' ? 'Mess-chat_style-bubbles' : 'Mess-chat_style-irc'
@@ -17,21 +19,22 @@ Storage.load()
                 chat: document.querySelector('._4_j4')
             };
 
-            const components = [
-                require('./components/ext-settings'),
-                require('./components/conversations'),
-                require('./components/auth-avatar'),
-                require('./components/chat-settings'),
-                require('./components/imgur-gifv')
+            // Start updaters - setInterval checks for Mess features
+            const updaters = [
+                require('./updaters/conversations'),
+                require('./updaters/auth-avatar'),
+                require('./updaters/chat-actions'),
+                require('./updaters/chat-settings'),
+                require('./updaters/imgur-gifv')
             ];
+            updaters.forEach(u => u(els, Storage));
 
-            components.forEach(c => {
-                const component = c(els, Storage);
-                if(component) {
-                    if(component.name == 'ext-settings' && optionsPage) {
-                        component.modal.open();
-                    }
-                }
-            });
+            // Create the settings modal
+            const settings = require('./components/ext-settings')(els, Storage);
+            
+            // If the options page has been requested, open now
+            if(optionsPage) {
+                settings.modal.open();
+            }
         };
     });

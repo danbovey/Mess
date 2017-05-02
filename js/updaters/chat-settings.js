@@ -1,8 +1,7 @@
 /**
  * Move the settings icon from the right sidebar to the header
- * Place next to the conversation header
  */
-module.exports = els => {
+module.exports = (els, Storage, interval = true) => {
     const moveSettings = () => {
         const rightSidebar = document.querySelector('._4_j5');
         if(rightSidebar) {
@@ -13,8 +12,11 @@ module.exports = els => {
                 return;
             }
         }
-
-        window.setTimeout(moveSettings, 5000);
     };
-    moveSettings();
+
+    if(interval) {
+        window.setInterval(moveSettings, 5000);
+    }
+
+    return moveSettings;
 };

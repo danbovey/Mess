@@ -3,7 +3,8 @@ const assign = require('assign-deep');
 let options = {
     theme: 'light',
     chat: {
-        style: 'bubbles'
+        style: 'bubbles',
+        actions: []
     },
     text: {
         emoji: 'facebook',

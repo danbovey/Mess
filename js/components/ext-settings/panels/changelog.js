@@ -1,25 +1,27 @@
-module.exports = Storage => {
-    const content = document.createElement('div');
-    content.classList.add('Mess-setting-panel');
-    content.id = 'Mess-panel-changelog';
+const createSetting = require('../../setting');
 
-    const group = document.createElement('div');
-    group.classList.add('Mess-setting-group');
-    let heading = document.createElement('h4');
-    heading.textContent = chrome.i18n.getMessage('settings_changelog');
-    group.appendChild(heading);
-    content.appendChild(group);
+module.exports = (els, Storage) => {
+    const panel = document.createElement('div');
+    panel.classList.add('Mess-setting-panel');
+    panel.id = 'Mess-panel-changelog';
 
-    var req = new XMLHttpRequest();
-    req.onload = e => {
-        const html = e.target.response;
-        const changeLog = document.createElement('div');
-        changeLog.classList.add('Mess-changelog');
-        changeLog.innerHTML = html;
-        group.appendChild(changeLog);
-    };
-    req.open('GET', 'https://raw.githubusercontent.com/danbovey/Mess/master/CHANGELOG.md');
-    req.send();
+    createSetting({
+        panel,
+        groupName: 'changelog',
+        heading: chrome.i18n.getMessage('settings_changelog'),
+        content: new Promise(resolve => {
+            var req = new XMLHttpRequest();
+            req.onload = e => {
+                const html = e.target.response;
+                const content = document.createElement('div');
+                content.classList.add('Mess-changelog');
+                content.innerHTML = html;
+                resolve(content);
+            };
+            req.open('GET', 'https://raw.githubusercontent.com/danbovey/Mess/master/CHANGELOG.md');
+            req.send();
+        })
+    });
 
-    return content;
+    return panel;
 };

@@ -36,6 +36,42 @@
     "message": "Bubbles: Messenger-style chat bubbles",
     "description": "Label for Bubble-style chat"
   },
+  "settings_appearance_chatactions": {
+    "message": "Chat actions",
+    "description": "Setting for which chat actions are visible to the user"
+  },
+  "settings_appearance_chatactions_file": {
+    "message": "Photos/Files",
+    "description": "Label for files"
+  },
+  "settings_appearance_chatactions_sticker": {
+    "message": "Stickers",
+    "description": "Label for stickers"
+  },
+  "settings_appearance_chatactions_gif": {
+    "message": "GIFs",
+    "description": "Label for gifs"
+  },
+  "settings_appearance_chatactions_emoji": {
+    "message": "Emoji",
+    "description": "Label for emoji"
+  },
+  "settings_appearance_chatactions_voice": {
+    "message": "Voice clip",
+    "description": "Label for voice"
+  },
+  "settings_appearance_chatactions_poll": {
+    "message": "Poll",
+    "description": "Label for poll"
+  },
+  "settings_appearance_chatactions_game": {
+    "message": "Games",
+    "description": "Label for games"
+  },
+  "settings_appearance_chatactions_cam": {
+    "message": "Quick cam",
+    "description": "Label for webcam"
+  },
 
   "settings_text": {
     "message": "Text & Images",

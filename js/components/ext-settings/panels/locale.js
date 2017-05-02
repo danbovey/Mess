@@ -1,50 +1,57 @@
+const createSetting = require('../../setting');
 const flags = require('../../../utils/flags');
 
-module.exports = Storage => {
-    const content = document.createElement('div');
-    content.classList.add('Mess-setting-panel');
-    content.id = 'Mess-panel-locale';
+module.exports = (els, Storage) => {
+    const panel = document.createElement('div');
+    panel.classList.add('Mess-setting-panel');
+    panel.id = 'Mess-panel-locale';
 
-    const language = document.createElement('div');
-    language.classList.add('Mess-setting-group');
-    const langHeading = document.createElement('h4');
-    langHeading.textContent = chrome.i18n.getMessage('settings_locale_language');
-    language.appendChild(langHeading);
+    createSetting({
+        panel,
+        groupName: 'language',
+        heading: chrome.i18n.getMessage('settings_locale_language'),
+        content: () => {
+            const content = document.createElement('div');
+            let localeCode = chrome.i18n.getMessage('@@ui_locale');
+            const locale = flags[localeCode];
+            if(locale.code) {
+                localeCode = locale.code;
+            }
+            const flag = document.createElement('img');
+            flag.classList.add('Mess-flag');
+            flag.setAttribute('src', `https://flagpedia.net/data/flags/normal/${localeCode}.png`);
+            flag.setAttribute('alt', locale.name);
+            content.appendChild(flag);
+            const languageName = document.createElement('span');
+            languageName.textContent = locale.name;
+            content.appendChild(languageName);
 
-    let localeCode = chrome.i18n.getMessage('@@ui_locale');
-    const locale = flags[chrome.i18n.getMessage('@@ui_locale')];
-    if(locale.code) {
-        localeCode = locale.code;
-    }
+            return content;
+        }
+    });
 
-    const flag = document.createElement('img');
-    flag.classList.add('Mess-flag');
-    flag.setAttribute('src', `https://flagpedia.net/data/flags/normal/${localeCode}.png`);
-    flag.setAttribute('alt', locale.name);
-    language.appendChild(flag);
-    const languageName = document.createElement('span');
-    languageName.textContent = locale.name;
-    language.appendChild(languageName);
-    content.appendChild(language);
+    let hr = document.createElement('hr');
+    panel.appendChild(hr);
 
-    const hr = document.createElement('hr');
-    content.appendChild(hr);
+    createSetting({
+        panel,
+        groupName: 'helptranslate',
+        heading: chrome.i18n.getMessage('settings_locale_help'),
+        content: () => {
+            const content = document.createElement('p');
+            const link = document.createElement('a');
+            link.setAttribute('href', 'http://github.com/danbovey/Mess');
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener');
+            link.textContent = chrome.i18n.getMessage('settings_locale_help_action');
+            content.appendChild(link);
+            
+            return content;
+        }
+    });
 
-    const helpTranslate = document.createElement('div');
-    helpTranslate.classList.add('Mess-setting-group');
-    const heading = document.createElement('h4');
-    heading.textContent = chrome.i18n.getMessage('settings_locale_help');
-    helpTranslate.appendChild(heading);
+    hr = document.createElement('hr');
+    panel.appendChild(hr);
 
-    const contribute = document.createElement('p');
-    const link = document.createElement('a');
-    link.setAttribute('href', 'http://github.com/danbovey/Mess');
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener');
-    link.textContent = chrome.i18n.getMessage('settings_locale_help_action');
-    contribute.appendChild(link);
-    helpTranslate.appendChild(contribute);
-    content.appendChild(helpTranslate);
-
-    return content;
+    return panel;
 };

@@ -7,6 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var browserify = require('browserify');
 var babelify = require('babelify');
+var globify = require('require-globify');
 var uglify = require('gulp-uglify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
@@ -29,7 +30,8 @@ gulp.task('js', function() {
 
     var tasks = files.map(function(entry) {
         return browserify({
-                entries: [entry]
+                entries: [entry],
+                transform: [globify]
             })
             .transform(babelify.configure({
                 presets: ["es2015"]

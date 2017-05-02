@@ -1,6 +1,6 @@
 const Modal = require('../modal');
 
-const toggle = require('./toggle');
+const toggle = require('./create-toggle');
 
 /**
  * Extension Settings
@@ -27,50 +27,25 @@ module.exports = (els, Storage) => {
     right.appendChild(actions);
     settingsDiv.appendChild(right);
 
-    const items = [
-        {
-            name: 'appearance',
-            label: chrome.i18n.getMessage('settings_appearance'),
-            panel: require('./panels/appearance')(Storage)
-        },
-        {
-            name: 'text',
-            label: chrome.i18n.getMessage('settings_text'),
-            panel: require('./panels/text')(Storage)
-        },
-        {
-            name: 'locale',
-            label: chrome.i18n.getMessage('settings_locale'),
-            panel: require('./panels/locale')(Storage)
-        },
-        {
-            name: 'support',
-            label: chrome.i18n.getMessage('settings_support'),
-            panel: require('./panels/support')(Storage)
-        },
-        {
-            name: 'changelog',
-            label: chrome.i18n.getMessage('settings_changelog'),
-            panel: require('./panels/changelog')(Storage),
-            small: true
-         }
-    ];
+    const panels = require('./panels/*.js', { mode: 'hash' });
+    const items = [ 'appearance', 'text', 'locale', 'support', 'changelog' ];
+    items.forEach(name => {
+        const panel = panels[name](els, Storage);
+        const label = chrome.i18n.getMessage(`settings_${name}`);
 
-    items.forEach(item => {
         // Create sidebar item
         const navItem = document.createElement('button');
         navItem.classList.add('sidebar-item');
-        // navItem.id = `Mess-sidebar-item-${item.name}`;
-        if(item.small) {
+        if(name == 'changelog') {
             navItem.classList.add('sidebar-item-small');
         }
-        navItem.textContent = item.label;
+        navItem.textContent = label;
         navItem.addEventListener('click', () => {
             // Update the active panel
             const panels = inner.querySelectorAll('.Mess-setting-panel');
             [].forEach.call(panels, p => p.classList.remove('active'));
 
-            const active = inner.querySelector(`#Mess-panel-${item.name}`);
+            const active = inner.querySelector(`#Mess-panel-${name}`);
             active.classList.add('active');
 
             // Update the active sidebar item
@@ -82,7 +57,7 @@ module.exports = (els, Storage) => {
         sidebar.appendChild(navItem);
 
         // Append content to settings inner
-        inner.appendChild(item.panel);
+        inner.appendChild(panel);
     });
 
     // Show the first panel

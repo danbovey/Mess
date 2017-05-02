@@ -1,63 +1,43 @@
-const createRadio = require('../radio');
+const createSetting = require('../../setting');
 
-module.exports = Storage => {
-    const content = document.createElement('div');
-    content.classList.add('Mess-setting-panel');
-    content.id = 'Mess-panel-text';
+module.exports = (els, Storage) => {
+    const panel = document.createElement('div');
+    panel.classList.add('Mess-setting-panel');
+    panel.id = 'Mess-panel-text';
 
-    const emojiStyle = document.createElement('div');
-    emojiStyle.classList.add('Mess-setting-group');
-    let heading = document.createElement('h4');
-    heading.textContent = chrome.i18n.getMessage('settings_text_emoji');
-    emojiStyle.appendChild(heading);
+    createSetting({
+        panel,
+        groupName: 'emoji',
+        heading: chrome.i18n.getMessage('settings_text_emoji'),
+        isChecked: name => Storage.get().text.emoji == name,
+        disabled: true,
+        inputs: [ 'facebook', 'apple', 'twitter', 'emojione' ],
+        label: name => chrome.i18n.getMessage(`settings_text_emoji_${name}`),
+        onChange: name => {
+            
+        }
+    });
 
-    let controlGroups = document.createElement('div');
-    controlGroups.classList.add('control-groups');
+    let hr = document.createElement('hr');
+    panel.appendChild(hr);
 
-    const handleEmojiClick = name => {
-        
-    };
-    const currEmoji = Storage.get().text.emoji;
-    const createEmojiRadio = name => {
-        controlGroups.appendChild(createRadio({
-            groupName: 'emoji',
-            name,
-            label: chrome.i18n.getMessage(`settings_text_emoji_${name}`),
-            checked: currEmoji == name,
-            disabled: true,
-            onClick: handleEmojiClick
-        }));
-    };
-    createEmojiRadio('facebook');
-    createEmojiRadio('apple');
-    createEmojiRadio('twitter');
-    createEmojiRadio('emojione');
-    emojiStyle.appendChild(controlGroups);
-    content.appendChild(emojiStyle);
-
-    const hr = document.createElement('hr');
-    content.appendChild(hr);
-
-    const images = document.createElement('div');
-    images.classList.add('Mess-setting-group');
-    heading = document.createElement('h4');
-    heading.textContent = chrome.i18n.getMessage('settings_text_images');
-    images.appendChild(heading);
-
-    controlGroups = document.createElement('div');
-    controlGroups.classList.add('control-groups');
-    controlGroups.appendChild(createRadio({
+    createSetting({
+        panel,
+        groupName: 'imgurgifv',
+        heading: chrome.i18n.getMessage('settings_text_images'),
         type: 'checkbox',
-        groupName: 'imgur_gifv',
-        name: 'imgur_gifv',
-        label: chrome.i18n.getMessage(`settings_text_images_imgurgifv`),
-        checked: Storage.get().text.imgur_gifv,
-        onClick: () => Storage.set({
-            text: { imgur_gifv: !Storage.get().text.imgur_gifv }
-        })
-    }));
-    images.appendChild(controlGroups);
-    content.appendChild(images);
+        isChecked: () => Storage.get().text.imgur_gifv,
+        inputs: [ 'imgurgifv' ],
+        label: () => chrome.i18n.getMessage(`settings_text_images_imgurgifv`),
+        onChange: () => {
+            Storage.set({
+                text: { imgur_gifv: !Storage.get().text.imgur_gifv }
+            });
+        }
+    });
 
-    return content;
+    hr = document.createElement('hr');
+    panel.appendChild(hr);
+
+    return panel;
 };

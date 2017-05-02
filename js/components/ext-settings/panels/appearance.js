@@ -1,79 +1,69 @@
-const createRadio = require('../radio');
+const createSetting = require('../../setting');
+const chatActions = require('../../../updaters/chat-actions');
 
-module.exports = Storage => {
-    const content = document.createElement('div');
-    content.classList.add('Mess-setting-panel');
-    content.id = 'Mess-panel-appearance';
+module.exports = (els, Storage) => {
+    const panel = document.createElement('div');
+    panel.classList.add('Mess-setting-panel');
+    panel.id = 'Mess-panel-appearance';
 
-    const theme = document.createElement('div');
-    theme.classList.add('Mess-setting-group');
-    let heading = document.createElement('h4');
-    heading.textContent = chrome.i18n.getMessage('settings_appearance_theme');
-    theme.appendChild(heading);
-
-    let controlGroups = document.createElement('div');
-    controlGroups.classList.add('control-groups', 'control-groups-theme');
-
-    // Create theme radio boxes
-    const handleClickTheme = name => {
-        document.body.classList.remove('Mess-theme-light', 'Mess-theme-dark');
-        document.body.classList.add(`Mess-theme-${name}`);
-        Storage.set({ theme: name });
-    };
-    const currTheme = Storage.get().theme;
-    controlGroups.appendChild(createRadio({
+    createSetting({
+        panel,
         groupName: 'theme',
-        name: 'dark',
-        label: chrome.i18n.getMessage('settings_appearance_theme_dark'),
-        checked: currTheme == 'dark',
-        onClick: handleClickTheme
-    }));
-    controlGroups.appendChild(createRadio({
-        groupName: 'theme',
-        name: 'light',
-        label: chrome.i18n.getMessage('settings_appearance_theme_light'),
-        checked: currTheme == 'light',
-        onClick: handleClickTheme
-    }));
+        heading: chrome.i18n.getMessage('settings_appearance_theme'),
+        isChecked: name => Storage.get().theme == name,
+        inputs: [ 'dark', 'light' ],
+        label: name => chrome.i18n.getMessage(`settings_appearance_theme_${name}`),
+        onChange: name => {
+            document.body.classList.remove('Mess-theme-light', 'Mess-theme-dark');
+            document.body.classList.add(`Mess-theme-${name}`);
+            Storage.set({ theme: name });
+        }
+    });
 
-    theme.appendChild(controlGroups);
-    content.appendChild(theme);
+    let hr = document.createElement('hr');
+    panel.appendChild(hr);
 
-    const hr = document.createElement('hr');
-    content.appendChild(hr);
+    createSetting({
+        panel,
+        groupName: 'chatstyle',
+        heading: chrome.i18n.getMessage('settings_appearance_chatstyle'),
+        isChecked: name => Storage.get().chat.style == name,
+        inputs: [ 'irc', 'bubbles' ],
+        label: name => chrome.i18n.getMessage(`settings_appearance_chatstyle_${name}`),
+        onChange: name => {
+            document.body.classList.remove('Mess-chat_style-irc', 'Mess-chat_style-bubbles');
+            document.body.classList.add(`Mess-chat_style-${name}`);
+            Storage.set({ chat: Object.assign(Storage.get().chat, { style: name }) });
+        }
+    });
 
-    const messageDisplay = document.createElement('div');
-    theme.classList.add('Mess-setting-group');
-    heading = document.createElement('h4');
-    heading.textContent = chrome.i18n.getMessage('settings_appearance_chatstyle');
-    messageDisplay.appendChild(heading);
+    hr = document.createElement('hr');
+    panel.appendChild(hr);
 
-    controlGroups = document.createElement('div');
-    controlGroups.classList.add('control-groups');
+    createSetting({
+        panel,
+        groupName: 'chatactions',
+        heading: chrome.i18n.getMessage('settings_appearance_chatactions'),
+        type: 'checkbox',
+        isChecked: name => Storage.get().chat.actions.indexOf(name) == -1,
+        inputs: [ 'file', 'sticker', 'gif', 'emoji', 'voice', 'poll', 'game', 'cam' ],
+        label: name => chrome.i18n.getMessage(`settings_appearance_chatactions_${name}`),
+        onChange: name => {
+            let actions = Storage.get().chat.actions;
+            if(actions.indexOf(name) > -1) {
+                actions = actions.filter(a => a != name);
+            } else {
+                actions.push(name);
+            }
+            Storage.set({ chat: { actions } });
 
-    const handleClickChatStyle = name => {
-        document.body.classList.remove('Mess-chat_style-irc', 'Mess-chat_style-bubbles');
-        document.body.classList.add(`Mess-chat_style-${name}`);
-        Storage.set({ chat: Object.assign(Storage.get().chat, { style: name }) });
-    };
-    const currChatStyle = Storage.get().chat.style;
-    controlGroups.appendChild(createRadio({
-        groupName: 'chat_style',
-        name: 'irc',
-        label: chrome.i18n.getMessage('settings_appearance_chatstyle_irc'),
-        checked: currChatStyle == 'irc',
-        onClick: handleClickChatStyle
-    }));
-    controlGroups.appendChild(createRadio({
-        groupName: 'chat_style',
-        name: 'bubbles',
-        label: chrome.i18n.getMessage('settings_appearance_chatstyle_bubbles'),
-        checked: currChatStyle == 'bubbles',
-        onClick: handleClickChatStyle
-    }));
+            // Update chat actions
+            chatActions(els, Storage, false)();
+        }
+    });
 
-    messageDisplay.appendChild(controlGroups);
-    content.appendChild(messageDisplay);
+    hr = document.createElement('hr');
+    panel.appendChild(hr);
 
-    return content;
+    return panel;
 };
