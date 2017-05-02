@@ -1,4 +1,4 @@
-<h3>Chat Actions and Translations</h3>
+<h3>Chat Actions and Translations 🎤🎌</h3>
 <ul>
     <li>Ability to hide chat actions like voice clip or stickers</li>
     <li>Spanish and French translations (Can you help translate?)</li>
