@@ -1,0 +1,105 @@
+.Mess-theme-dark {
+    // Dialog container
+    ._53ik {
+        // Search input
+        ._58al {
+            background: #424549;
+            color: rgba(#FFF, 0.7);
+
+            &::placeholder {
+                color: #CCC;
+            }
+        }
+
+        // Scrollable area bottom gradient
+        .uiScrollableArea.contentAfter:after {
+            background: linear-gradient(rgba(#000, 0.05), #000);
+        }
+
+        // Dialog caret
+        ._53io {
+            filter: brightness(0%);
+        }
+    }
+
+    // Stickers
+    ._293j._5r8f {
+        // Stickers header
+        ._5r8e {
+            border-bottom-color: #2B2B2B;
+        }
+        // Stickers header item before
+        ._eb3:before {
+            background-color: #262626;
+        }
+        // Stickers header item active
+        ._5r8a._5r8b {
+            background: #161411;
+        }
+        // Stickers more header item
+        ._37wv {
+            border-left-color: #262626;
+        }
+        // Sticker store header item
+        ._5r86 {
+            border-left-color: #262626;
+        }
+        // Sticker header go back button
+        ._37wu {
+            border-right-color: #262626;
+        }
+
+        // Search
+        ._55r1 {
+            // Padding fix
+            padding-left: 25px;
+            background: #424549;
+            border-color: #22201D;
+        }
+
+        // Sticker hover
+        ._5r8h:hover {
+            background: #1F1D1B;
+        }
+    }
+
+    // Emoji picker
+    ._4pi8 ._1uwz._1uwx._51m- {
+        background: #222;
+    }
+
+    ._53ik {
+        // Poll creator title
+        ._5jn1 {
+            color: rgba(#FFF, 0.5);
+        }
+        // Poll creator question
+        ._9fw {
+            background: #424549;
+        }
+        // Poll creator option
+        ._9fv._58ak ._58al {
+            background: none;
+        }
+    }
+
+    // Games dialog
+    ._3rh0 {
+        background: #090806;
+
+        // List title
+        ._4lh7 {
+            color: rgba(#FFF, 0.7);
+        }
+
+        // List
+        ._4lh2 {
+            background: #000;
+
+            // List item
+            ._4lh9 {
+                color: #EEE;
+            }
+        }
+    }
+}

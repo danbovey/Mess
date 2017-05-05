@@ -1,0 +1,23 @@
+.Mess-theme-dark {
+    // All modal containers
+    ._59s7 {
+        background: none;
+    }
+
+    // Camera modal
+    ._4eby._2c9g {
+        background: #000;
+
+        // Title
+        ._19jt ._4qba {
+            color: #EEE;
+        }
+        .uiCloseButton {
+            filter: brightness(1000%);
+
+            &:hover, &:focus {
+                filter: none;
+            }
+        }
+    }
+}
