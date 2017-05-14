@@ -2,6 +2,10 @@
 
 # Mess
 
+![Chrome Web Store](https://img.shields.io/badge/users-100%2B-brightgreen.svg?style=flat-square)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/hpjbefeabedbcmieiedpnhpngeacjamg.svg?style=flat-square)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating-count/hpjbefeabedbcmieiedpnhpngeacjamg.svg?style=flat-square)
+
 > 💬 A Discord skin for messenger.com
 
 ### [Download for Google Chrome](https://chrome.google.com/webstore/detail/mess/hpjbefeabedbcmieiedpnhpngeacjamg)
