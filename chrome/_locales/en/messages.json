@@ -149,6 +149,9 @@
     "description": "Category for viewing the extension change log"
   },
 
+  "menu_settings": {
+    "message": "Settings"
+  },
   "menu_activecontacts": {
     "message": "Active contacts",
     "description": "The string Messenger use to describe online contacts in the settings menu"

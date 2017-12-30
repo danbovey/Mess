@@ -9,10 +9,10 @@
     ._5irm {
         box-sizing: border-box;
         display: flex;
-        min-height: 46px;
+        min-height: 44px;
         margin: 0 !important;
         padding: 0 10px;
-        border: 2px solid transparent;
+        border: none;
         border-radius: $border-radius;
 
         ._kmc {
@@ -36,8 +36,8 @@
             align-items: flex-start;
 
             ._kmc {
-                padding-top: 12px;
-                padding-bottom: 12px;
+                padding-top: 13px;
+                padding-bottom: 13px;
             }
 
             // Chat actions
@@ -60,6 +60,16 @@
     ._4rv3 {
         ._5irm {
             border-color: #DADDDF;
+            background: #F6F6F7;
+
+            ._kmc {
+
+                // Placeholder
+                ._1p1v {
+                    color: hsla(218, 5%, 47%, 0.3);
+                    -webkit-text-fill-color: hsla(218, 5%, 47%, 0.3);
+                }
+            }
         }
     }
 }
@@ -68,20 +78,18 @@
     // Textarea
     ._4rv3 {
         border-top: 1px solid rgba(#FFF, 0.06);
-        box-shadow: 0 -1px 0 rgba(#000, 0.1);
 
         // Input wrapper
         ._5irm {
-            border-color: rgba(#FFF, 0.2);
-            background: rgba(#FFF, 0.06);
+            background: hsla(218, 5%, 47%, 0.3);
 
             ._kmc {
                 color: rgba(#FFF, 0.7);
 
                 // Placeholder
                 ._1p1v {
-                    color: rgba(#FFF, 0.2);
-                    -webkit-text-fill-color: rgba(#FFF, 0.2);
+                    color: rgba(#FFF, 0.3);
+                    -webkit-text-fill-color: rgba(#FFF, 0.3);
                 }
             }
 

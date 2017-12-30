@@ -35,6 +35,6 @@
   },
   "dependencies": {
     "assign-deep": "^0.4.5",
-    "tooltip.js": "^1.1.2"
+    "tooltip.js": "1.1.2"
   }
 }

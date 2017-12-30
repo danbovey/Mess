@@ -1,22 +1,11 @@
-const Tooltip = require('tooltip.js');
-
 /**
  * Check for conversations that need tooltips every 5 seconds
  */
 module.exports = (els, Storage, interval = true) => {
-    const addTooltip = (el, text) => {
-        new Tooltip(el, {
-            placement: 'right',
-            title: text,
-            template: (
-                '<div class="Mess-tooltip" role="tooltip">' +
-                    '<div class="tooltip-arrow"></div>' +
-                    '<div class="tooltip-inner">' +
-                    '</div>' +
-                '</div>'
-            ),
-            container: document.body
-        });
+    const addTooltip = (el, name) => {
+        el.setAttribute('data-hover', 'tooltip');
+        el.setAttribute('data-tooltip-position', 'right');
+        el.setAttribute('data-tooltip-content', name);
     };
 
     const checkTooltips = () => {
@@ -42,7 +31,9 @@ module.exports = (els, Storage, interval = true) => {
 
                 const avatar = contact.querySelector('._4ldz');
                 const contactName = contact.querySelector('._364g');
-                addTooltip(avatar, contactName.textContent);
+                if(avatar && contactName) {
+                    addTooltip(avatar, contactName.textContent);
+                }
             }
         });
     };

@@ -99,7 +99,7 @@ $avatar-width: 32px;
     $text-color: rgba(#FFF, 0.4);
 
     ._4_j5 {
-        background: #2E3136;
+        background: #2F3136;
         color: $text-color;
 
         // Conversation text edit, Section title, Options text, Add People, People
@@ -109,6 +109,14 @@ $avatar-width: 32px;
         ._4rph ._4rpj,
         ._364g {
             color: $text-color;
+        }
+
+        // Options list
+        ._1li_ {
+            // Option text
+            ._3szq {
+                color: $text-color;
+            }
         }
 
         // Conversation info subtitle

@@ -18,8 +18,8 @@
 .Mess-chat_style-bubbles {
     // Chat scroller
     ._4_j4 {
-        // Hide user's avatar with right-aligned bubbles
-        .Mess-auth-avatar {
+        // Hide auth user's avatar and name as it's made obvious by right-aligned bubbles
+        .Mess-auth-avatar, .Mess-auth-name {
             display: none;
         }
     }
@@ -97,6 +97,8 @@
 
         // Sender name
         ._ih3 {
+            position: relative;
+            top: -5px;
             margin: 0;
             padding-left: 0;
             font-size: 15px;
@@ -223,6 +225,21 @@
             ._llq,
             ._36zg {
                 color: #AAA;
+            }
+        }
+
+        // Fixed top element (Search in conversations, Plan)
+        ._33p7 {
+            background: $color-friend-list;
+            color: #CCC;
+
+            ._5iwm ._58al {
+                background: #424549;
+                color: #FFF;
+
+                &::placeholder {
+                    color: #CCC;
+                }
             }
         }
     }
