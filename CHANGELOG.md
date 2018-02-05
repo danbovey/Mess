@@ -1,3 +1,8 @@
+<h3>Plan Header 📅</h3>
+<ul>
+    <li>Dark theme for plan header <a href="https://github.com/danbovey/Mess/issues/17">#17</a></li>
+</ul>
+
 <h3>Style fixes ⚒</h3>
 <ul>
     <li>Display your own name on top of IRC-style messages <a href="https://github.com/danbovey/Mess/issues/15">#15</a></li>
