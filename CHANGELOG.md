@@ -1,3 +1,10 @@
+<h3>Attachment Shelf 📎</h3>
+<p>Messenger added a link previewer when you share things with a URL.</p>
+<ul>
+    <li>Dark theme for new attachment shelf <a href="https://github.com/danbovey/Mess/issues/18">#18</a></li>
+</ul>
+
+
 <h3>Plan Header 📅</h3>
 <ul>
     <li>Dark theme for plan header <a href="https://github.com/danbovey/Mess/issues/17">#17</a></li>
