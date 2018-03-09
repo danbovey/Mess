@@ -1,0 +1,13 @@
+.chatAttachmentShelf {
+    // Text
+    ._42ef {
+        padding-left: 10px;
+    }
+}
+
+.Mess-theme-dark {
+    .chatAttachmentShelf {
+        border-top-color: rgba(#000, 0.1) !important;
+        background: rgba(#333, 0.2) !important;
+    }
+}
