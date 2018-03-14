@@ -1,10 +1,9 @@
 {
   "manifest_version": 2,
-
   "name": "Mess",
   "description": "A Discord skin for messenger.com",
   "author": "Dan Bovey",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "minimum_chrome_version": "36",
   "default_locale": "en",
 
