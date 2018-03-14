@@ -1,13 +1,23 @@
-.chatAttachmentShelf {
+._4_j4 .chatAttachmentShelf {
     // Text
     ._42ef {
         padding-left: 10px;
     }
 }
 
+// Remove border around attachment shelf
+.fbNubFlyoutAttachments {
+    border: none !important;
+}
+
 .Mess-theme-dark {
-    .chatAttachmentShelf {
-        border-top-color: rgba(#000, 0.1) !important;
-        background: rgba(#333, 0.2) !important;
+    // Dark theme for attachment shelf
+    ._4_j4 .chatAttachmentShelf {
+        border-top-color: rgba(#000, 0.2) !important;
+        background: #36393E !important;
+
+        ._tih._49ou._310t {
+            background: #36393E;
+        }
     }
 }
