@@ -98,7 +98,16 @@
             ._4ce_ {
                 opacity: 1;
                 background-image: url('chrome-extension://__MSG_@@extension_id__/img/chat-actions.png');
-                // filter: invert(100%);
+            }
+            // Sticker action
+            ._4rv6 {
+                background-position: 0 -330px;
+                background-size: 33px;
+            }
+            // Game action
+            ._4ce_ {
+                background-position: 0 -395px;
+                background-size: 33px;
             }
         }
     }

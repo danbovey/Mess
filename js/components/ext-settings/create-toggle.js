@@ -2,7 +2,7 @@
  * Add "Mess Settings" action to settings dropdown
  */
 module.exports = (els, modal) => {
-    const conversationsActions = els.conversations.querySelector('._3lz9');
+    const conversationsActions = els.conversations.querySelector('._36ic');
     let settingsBtn;
 
     const injectExtSettings = () => {

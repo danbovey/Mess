@@ -8,13 +8,14 @@ module.exports = (els, Storage, interval = true) => {
             const icon = rightSidebar.querySelector('._3-ne');
             if(icon) {
                 // Header
-                document.querySelector('._5742').appendChild(icon);
+                els.header.appendChild(icon);
                 return;
             }
         }
     };
 
     if(interval) {
+        moveSettings();
         window.setInterval(moveSettings, 5000);
     }
 

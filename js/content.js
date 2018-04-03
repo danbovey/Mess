@@ -15,7 +15,7 @@ Storage.load()
             // Define important elements
             const els = {
                 conversations: document.querySelector('._1enh'),
-                header: document.querySelector('._5742'),
+                header: document.querySelector('._673w'),
                 chat: document.querySelector('._4_j4')
             };
 
